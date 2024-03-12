@@ -26,6 +26,7 @@ static void init_opt_reading(void);
 static bool is_movement();
 static int get_light_reading(void);
 static bool is_light_different();
+static void print_statistics();
 
 // Variables
 static int state = IDLE_STATE;
@@ -158,6 +159,7 @@ PROCESS_THREAD(state_change, ev, data) {
     }
 
     if (etimer_expired(&total_active_timer)) {
+        printf("WAIT/BUZZ -> IDLE\n");
         state = IDLE_STATE;
         buzzer_stop();
     }
