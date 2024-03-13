@@ -1,13 +1,13 @@
 #include "contiki.h"
+#include "board-peripherals.h"
 #include "sys/etimer.h"
 #include "sys/rtimer.h"
 #include "buzzer.h"
+
+#include <stdbool.h>
+#include <stdint.h>
 #include <stdio.h>
 #include <math.h>
-
-#include "board-peripherals.h"
-
-#include <stdint.h>
 
 PROCESS(state_change, "State change");
 AUTOSTART_PROCESSES(&state_change);
@@ -16,7 +16,7 @@ AUTOSTART_PROCESSES(&state_change);
 #define BUZZ_STATE 1
 #define WAIT_STATE 2
 #define IDLE_STATE 3
-#define LIGHT_THRESHOLD 300
+#define LIGHT_THRESHOLD 1
 #define GYRO_THRESHOLD 10000 // need help identifying actual threshold
 #define MOTION_THRESHOLD 10000 // need help identifying actual threshold
 
@@ -48,6 +48,7 @@ static int previous_light;
 static void init_mpu_reading(void) {
   mpu_9250_sensor.configure(SENSORS_ACTIVE, MPU_9250_SENSOR_TYPE_ALL);
 }
+
 static void init_opt_reading(void) {
   SENSORS_ACTIVATE(opt_3001_sensor);
 }
@@ -109,7 +110,7 @@ PROCESS_THREAD(state_change, ev, data) {
   buzzer_init();
   init_opt_reading();
   init_mpu_reading();
-  printf("Program Start\n");
+  printf("Program start\n\n");
 
   //Let timer warm up to get reading
   etimer_set(&delay_timer, CLOCK_SECOND*3);
@@ -121,14 +122,14 @@ PROCESS_THREAD(state_change, ev, data) {
   prev_gY = mpu_9250_sensor.value(MPU_9250_SENSOR_TYPE_GYRO_Y);
   prev_gZ = mpu_9250_sensor.value(MPU_9250_SENSOR_TYPE_GYRO_Z);
 
-  while(true) {
-    print_statistics();
+  while(1) {
+    // print_statistics();
 
     // if significant motion or light change is detected, go into buzz state
     if((is_movement() || is_light_diff()) && state == IDLE_STATE) {
       printf("detected movement\n");
       printf("IDLE -> BUZZ\n");
-      print_statistics();
+      // print_statistics();
 
       // Initialise active timer
       // total active state lasts for 16s
@@ -144,13 +145,13 @@ PROCESS_THREAD(state_change, ev, data) {
       state = WAIT_STATE;
 
       printf("BUZZ -> WAIT\n");
-      print_statistics();
+      // print_statistics();
       etimer_set(&wait_timer, CLOCK_SECOND*2); // wait for 2 seconds
     }
 
     if(state == WAIT_STATE && etimer_expired(&wait_timer) && !etimer_expired(&total_active_timer)) {
       printf("WAIT -> BUZZ\n");
-      print_statistics();
+      // print_statistics();
 
       state = BUZZ_STATE;
       buzzer_start(2069);
@@ -159,9 +160,11 @@ PROCESS_THREAD(state_change, ev, data) {
     }
 
     if (etimer_expired(&total_active_timer)) {
-        printf("WAIT/BUZZ -> IDLE\n");
         state = IDLE_STATE;
-        buzzer_stop();
+        printf("WAIT/BUZZ -> IDLE\n");
+        if (buzzer_state()) {
+          buzzer_stop();
+        }
     }
 
     PROCESS_PAUSE();
