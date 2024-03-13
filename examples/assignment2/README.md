@@ -1,7 +1,20 @@
 # Assignment 2
-https://weiserlab.github.io/wirelessnetworking/Assignment2_v3.pdf 
 
-# Set up
-1. Follow instructions: https://weiserlab.github.io/wirelessnetworking/Assignment1_Windows.pdf, https://weiserlab.github.io/wirelessnetworking/Assignment1_maclinux.pdf 
-2. git clone https://github.com/BrendonLau/CS4222.git --recursive
-3. make TARGET=cc26x0-cc13x0 BOARD=sensortag/cc2650 <filename>
+> [Link to assignment document](https://weiserlab.github.io/wirelessnetworking/Assignment2_v3.pdf)
+
+## Set up
+
+1. Recusively clone the repositoty: `git clone https://github.com/BrendonLau/CS4222.git --recursive`
+2. Build the necessary binary: `make <filename.c>`
+   1. The `TARGET` and `BOARD` variables have been set in the `Makefile` for convenience
+3. Flash the binary using [Uniflash](https://www.ti.com/tool/download/UNIFLASH)
+   1. Device: `CC2650F128 (On-Chip)`
+   2. Connection: `Texas Instrument XDS110 USB Debug Probe`
+4. View the debugging console using 
+   1. MacOS: `make PORT=</dev/tty.usbmodem*> login`
+      1. May have to trial and error to figure out which `/dev/tty.usbmodem*` to use, display possibilities using `ls /dev/tty*`
+   2. Windows: TODO
+5. Run the image by clicking `Verify image`
+
+> [!NOTE]
+> When flashing on MacOS, you would need to add a `.bin` suffix at the end of the binary in order to select it through Uniflash

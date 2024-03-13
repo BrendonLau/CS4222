@@ -132,7 +132,7 @@ PROCESS_THREAD(state_change, ev, data) {
 
       // Initialise active timer
       // total active state lasts for 16s
-      timer_set(&total_active_timer, CLOCK_SECOND*16); 
+      etimer_set(&total_active_timer, CLOCK_SECOND*16); 
 
       state = BUZZ_STATE;
       buzzer_start(2069);
