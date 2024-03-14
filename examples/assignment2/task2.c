@@ -81,15 +81,14 @@ static int get_light_reading() {
   if(value != CC26XX_SENSOR_READING_ERROR) {
     //printf("OPT: Light=%d.%02d lux\n", value / 100, value % 100);
     return value;
-  } else {
-    printf("OPT: Light Sensor's Warming Up\n\n");
   }
-  init_opt_reading();
   return -1;
 }
 
 static bool is_light_diff() {
   int value = get_light_reading();
+  init_opt_reading();
+
   bool isAboveThreshold = abs(value - previous_light) > LIGHT_THRESHOLD;
   if (isAboveThreshold) {
     previous_light = value;
