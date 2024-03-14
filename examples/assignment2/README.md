@@ -1,3 +1,17 @@
+# Task 1 readings
+
+Value of CLOCK_SECOND: 128
+Number of clock ticks per second in 1s (real time) using etimer: 128
+Value of RTIMER_SECOND: 65536
+Number of clock ticks per second in 1s (real time) using rtimer: 128
+
+# Name & ID of group members
+
+Brendon Lau Cheng Yang A0220999N
+Ng Jun Kang A0218325J
+Pang Yuan Ker A0227560H
+Yusuf Bin Musa A0218228E
+
 # Assignment 2
 
 > [Link to assignment document](https://weiserlab.github.io/wirelessnetworking/Assignment2_v3.pdf)
