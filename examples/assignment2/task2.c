@@ -17,8 +17,8 @@ AUTOSTART_PROCESSES(&state_change);
 #define WAIT_STATE 2
 #define IDLE_STATE 3
 #define LIGHT_THRESHOLD 30000
-#define GYRO_THRESHOLD 10000 // need help identifying actual threshold
-#define MOTION_THRESHOLD 10000 // need help identifying actual threshold
+#define GYRO_THRESHOLD 15000 // need help identifying actual threshold
+#define MOTION_THRESHOLD 15000 // need help identifying actual threshold
 
 // Functions
 static void init_mpu_reading(void);

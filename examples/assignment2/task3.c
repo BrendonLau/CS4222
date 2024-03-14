@@ -18,8 +18,8 @@ AUTOSTART_PROCESSES(&state_change);
 #define IDLE_STATE 3
 #define INTERIM_STATE 4
 #define LIGHT_THRESHOLD 30000
-#define GYRO_THRESHOLD 10000 // need help identifying actual threshold
-#define MOTION_THRESHOLD 10000 // need help identifying actual threshold
+#define GYRO_THRESHOLD 15000 // need help identifying actual threshold
+#define MOTION_THRESHOLD 15000 // need help identifying actual threshold
 
 // Functions
 static void init_mpu_reading(void);
@@ -46,6 +46,7 @@ static int prev_gX, prev_gY, prev_gZ;
 // Prev state of the light
 static int previous_light;
 static bool isFirstRun;
+static bool is_idle;
 
 // Initialise device readings
 static void init_mpu_reading(void) {
@@ -97,6 +98,7 @@ static bool is_light_diff() {
   return isAboveThreshold;
 }
 
+
 static void print_statistics() {
     printf("prev light:%d, curr light: %d\n", previous_light, curr_light);
     printf("prev gX gY gZ: %d %d %d, cur gX gY gZ: %d %d %d\n", prev_gX, prev_gY, prev_gZ, gX, gY, gZ);
@@ -126,16 +128,27 @@ PROCESS_THREAD(state_change, ev, data) {
   print_statistics();
 
   while(1) {
-    is_light_diff();
-    etimer_set(&wait_timer, CLOCK_SECOND/4);
-    PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&wait_timer));
+    is_light_diff() ;
+    etimer_set(&delay_timer, CLOCK_SECOND/4);
+    PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&delay_timer));
 
-    if (state == IDLE_STATE && is_movement()) {
+    if (is_movement() && state == IDLE_STATE) {
         printf("detected movement\n");
         printf("IDLE -> INTERIM\n");
+        print_statistics();
         state = INTERIM_STATE;
+        is_idle = false;
         continue;
     }
+    // if (is_light_diff() && (state == WAIT_STATE || state == BUZZ_STATE)) {
+    //     printf("detected light\n");
+    //     printf("IDLE\n");
+    //     if (buzzer_state()) {
+    //         buzzer_stop();
+    //     }
+    //     state = IDLE_STATE;
+    //     continue;
+    // }
     if (state == INTERIM_STATE && is_light_diff()) {
         printf("detected light\n");
         printf("INTERIM -> BUZZ\n");
@@ -144,39 +157,49 @@ PROCESS_THREAD(state_change, ev, data) {
         continue;
     }
     if (state == BUZZ_STATE) {
+        // printf("isFirstRun: %s\n", isFirstRun ? "true": "false");
         if (isFirstRun) {
             printf("BUZZ -> WAIT\n");
             buzzer_start(2069);
             etimer_set(&buzzer_timer, CLOCK_SECOND*2);
             state = WAIT_STATE;
-        } else if (etimer_expired(&wait_timer) && is_light_diff()) {
+        } else if (is_light_diff()) {
+            if (buzzer_state()) {
+                buzzer_stop();
+            }
             printf("detected light\n");
             printf("BUZZ -> IDLE\n");
             state = IDLE_STATE;
         } else if (etimer_expired(&wait_timer)) {
-            printf("BUZZ -> WAIT\n");
             buzzer_start(2069);
             etimer_set(&buzzer_timer, CLOCK_SECOND*2);
+            is_idle = is_light_diff();
             state = WAIT_STATE;
-
+            printf("BUZZ -> WAIT\n");
         }
         continue;
     }
-    if (state == WAIT_STATE && etimer_expired(&buzzer_timer)) {
+    if (state == WAIT_STATE) {
+        if (!etimer_expired(&buzzer_timer)) {
+            continue;
+        }
         buzzer_stop();
         if (isFirstRun) {
             etimer_set(&wait_timer, CLOCK_SECOND*4);
             isFirstRun = false;
-            printf("WAIT -> BUZZ\n");
             state = BUZZ_STATE;
-        } else if (is_light_diff()) {
+            // PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&wait_timer));
+            printf("WAIT -> BUZZ\n");
+        } else if (is_idle || is_light_diff()) {
             printf("detected light\n");
             printf("WAIT -> IDLE\n");
             state = IDLE_STATE;
         } else {
-            printf("WAIT -> BUZZ\n");
             state = BUZZ_STATE;
             etimer_set(&wait_timer, CLOCK_SECOND*4);
+            is_idle = is_light_diff();
+            // PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&wait_timer));
+            printf("WAIT -> BUZZ\n");
         }
         continue;
 
