@@ -90,9 +90,8 @@ static bool is_light_diff() {
   get_light_reading();
 
   bool isAboveThreshold = abs(curr_light - previous_light) > LIGHT_THRESHOLD;
-  if (isAboveThreshold) {
-    previous_light = curr_light;
-  }
+  previous_light = curr_light;
+  
   return isAboveThreshold;
 }
 
@@ -116,20 +115,21 @@ PROCESS_THREAD(state_change, ev, data) {
   PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&delay_timer));
 
   // initialise variables
+  get_light_reading();
   previous_light = curr_light;
-  print_statistics();
   prev_gX = mpu_9250_sensor.value(MPU_9250_SENSOR_TYPE_GYRO_X);
   prev_gY = mpu_9250_sensor.value(MPU_9250_SENSOR_TYPE_GYRO_Y);
   prev_gZ = mpu_9250_sensor.value(MPU_9250_SENSOR_TYPE_GYRO_Z);
 
+  print_statistics();
+
   while(1) {
-    // print_statistics();
+    print_statistics();
     etimer_set(&delay_timer, CLOCK_SECOND/4);
     PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&delay_timer));
 
     // if significant motion or light change is detected, go into buzz state
-    //TODO: ADD BACK MOTION SENSING
-    if((is_light_diff()) && state == IDLE_STATE) {
+    if((is_movement() || is_light_diff()) && state == IDLE_STATE) {
       printf("detected movement\n");
       printf("IDLE -> BUZZ\n");
       // print_statistics();
