@@ -36,8 +36,8 @@ static struct etimer delay_timer;
 static struct etimer total_active_timer;
 
 // Cur states
-int gX, gY, gZ;
-int accX, accY, accZ;
+static int gX, gY, gZ;
+static int accX, accY, accZ;
 
 // Prev state of gyros
 static int prev_gX, prev_gY, prev_gZ;
@@ -159,7 +159,7 @@ PROCESS_THREAD(state_change, ev, data) {
       etimer_set(&buzzer_timer, CLOCK_SECOND*2); // set buzz for 2 seconds
     }
 
-    if (etimer_expired(&total_active_timer)) {
+    if (state != IDLE_STATE && etimer_expired(&total_active_timer)) {
         state = IDLE_STATE;
         printf("WAIT/BUZZ -> IDLE\n");
         if (buzzer_state()) {
