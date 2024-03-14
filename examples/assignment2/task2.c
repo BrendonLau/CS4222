@@ -16,7 +16,7 @@ AUTOSTART_PROCESSES(&state_change);
 #define BUZZ_STATE 1
 #define WAIT_STATE 2
 #define IDLE_STATE 3
-#define LIGHT_THRESHOLD 1
+#define LIGHT_THRESHOLD 30000
 #define GYRO_THRESHOLD 10000 // need help identifying actual threshold
 #define MOTION_THRESHOLD 10000 // need help identifying actual threshold
 
@@ -24,7 +24,7 @@ AUTOSTART_PROCESSES(&state_change);
 static void init_mpu_reading(void);
 static void init_opt_reading(void);
 static bool is_movement();
-static int get_light_reading(void);
+static void get_light_reading(void);
 static bool is_light_different();
 static void print_statistics();
 
@@ -38,6 +38,7 @@ static struct etimer total_active_timer;
 // Cur states
 static int gX, gY, gZ;
 static int accX, accY, accZ;
+static int curr_light;
 
 // Prev state of gyros
 static int prev_gX, prev_gY, prev_gZ;
@@ -76,28 +77,27 @@ static bool is_movement() {
   return is_accel_diff || is_gyro_diff;
 }
 
-static int get_light_reading() {
+static void get_light_reading() {
   int value = opt_3001_sensor.value(0);
   if(value != CC26XX_SENSOR_READING_ERROR) {
-    //printf("OPT: Light=%d.%02d lux\n", value / 100, value % 100);
-    return value;
+    // printf("OPT: Light=%d.%02d lux\n", value / 100, value % 100);
+    curr_light = value;
   }
-  return -1;
+  init_opt_reading();
 }
 
 static bool is_light_diff() {
-  int value = get_light_reading();
-  init_opt_reading();
+  get_light_reading();
 
-  bool isAboveThreshold = abs(value - previous_light) > LIGHT_THRESHOLD;
+  bool isAboveThreshold = abs(curr_light - previous_light) > LIGHT_THRESHOLD;
   if (isAboveThreshold) {
-    previous_light = value;
+    previous_light = curr_light;
   }
   return isAboveThreshold;
 }
 
 static void print_statistics() {
-    printf("prev light:%d, curr light: %d\n", previous_light, get_light_reading());
+    printf("prev light:%d, curr light: %d\n", previous_light, curr_light);
     printf("prev gX gY gZ: %d %d %d, cur gX gY gZ: %d %d %d\n", prev_gX, prev_gY, prev_gZ, gX, gY, gZ);
     printf("curr accX accY accZ: %d %d %d\n", accX, accY, accZ);
 }
@@ -112,20 +112,24 @@ PROCESS_THREAD(state_change, ev, data) {
   printf("Program start\n\n");
 
   //Let timer warm up to get reading
-  etimer_set(&delay_timer, CLOCK_SECOND*3);
+  etimer_set(&delay_timer, CLOCK_SECOND);
   PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&delay_timer));
 
   // initialise variables
-  previous_light = get_light_reading();
+  previous_light = curr_light;
+  print_statistics();
   prev_gX = mpu_9250_sensor.value(MPU_9250_SENSOR_TYPE_GYRO_X);
   prev_gY = mpu_9250_sensor.value(MPU_9250_SENSOR_TYPE_GYRO_Y);
   prev_gZ = mpu_9250_sensor.value(MPU_9250_SENSOR_TYPE_GYRO_Z);
 
   while(1) {
     // print_statistics();
+    etimer_set(&delay_timer, CLOCK_SECOND/4);
+    PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&delay_timer));
 
     // if significant motion or light change is detected, go into buzz state
-    if((is_movement() || is_light_diff()) && state == IDLE_STATE) {
+    //TODO: ADD BACK MOTION SENSING
+    if((is_light_diff()) && state == IDLE_STATE) {
       printf("detected movement\n");
       printf("IDLE -> BUZZ\n");
       // print_statistics();
