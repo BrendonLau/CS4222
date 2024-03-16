@@ -51,20 +51,19 @@ static void get_light_reading(void);
 void
 do_rtimer_timeout(struct rtimer *timer, void *ptr)
 {
-  /* Re-arm rtimer. Starting up the sensor takes around 125ms */
-  /* rtimer period 2s */
-  clock_time_t t;
+
+  rtimer_clock_t now=RTIMER_NOW();
 
   rtimer_set(&timer_rtimer, RTIMER_NOW() + timeout_rtimer, 0, do_rtimer_timeout, NULL);
 
   int s, ms1,ms2,ms3;
-  s = clock_time() / CLOCK_SECOND;
-  ms1 = (clock_time()% CLOCK_SECOND)*10/CLOCK_SECOND;
-  ms2 = ((clock_time()% CLOCK_SECOND)*100/CLOCK_SECOND)%10;
-  ms3 = ((clock_time()% CLOCK_SECOND)*1000/CLOCK_SECOND)%10;
+  s = now /RTIMER_SECOND;
+  ms1 = (now% RTIMER_SECOND)*10/RTIMER_SECOND;
+  ms2 = ((now% RTIMER_SECOND)*100/RTIMER_SECOND)%10;
+  ms3 = ((now% RTIMER_SECOND)*1000/RTIMER_SECOND)%10;
   
   counter_rtimer++;
-  printf(": %d (cnt) %d (ticks) %d.%d%d%d (sec) \n",counter_rtimer,clock_time(), s, ms1,ms2,ms3); 
+  printf(": %d (cnt) %d (ticks) %d.%d%d%d (sec) \n",counter_rtimer,now, s, ms1,ms2,ms3); 
   get_light_reading();
 
 }
