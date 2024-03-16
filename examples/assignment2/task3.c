@@ -18,8 +18,8 @@ AUTOSTART_PROCESSES(&state_change);
 #define IDLE_STATE 3
 #define INTERIM_STATE 4
 #define LIGHT_THRESHOLD 30000
-#define GYRO_THRESHOLD 15000 // need help identifying actual threshold
-#define MOTION_THRESHOLD 15000 // need help identifying actual threshold
+#define GYRO_THRESHOLD 15000
+#define MOTION_THRESHOLD 15000
 
 // Functions
 static void init_mpu_reading(void);
@@ -43,21 +43,25 @@ static int curr_light;
 
 // Prev state of gyros
 static int prev_gX, prev_gY, prev_gZ;
+
 // Prev state of the light
 static int previous_light;
-static bool isFirstRun;
-static bool is_idle;
+static bool is_first_run = true;
+static bool is_state_running = false;
 
 // Initialise device readings
-static void init_mpu_reading(void) {
+static void init_mpu_reading(void)
+{
   mpu_9250_sensor.configure(SENSORS_ACTIVE, MPU_9250_SENSOR_TYPE_ALL);
 }
 
-static void init_opt_reading(void) {
+static void init_opt_reading(void)
+{
   SENSORS_ACTIVATE(opt_3001_sensor);
 }
 
-static bool is_movement() {
+static bool is_movement()
+{
   gX = mpu_9250_sensor.value(MPU_9250_SENSOR_TYPE_GYRO_X);
   gY = mpu_9250_sensor.value(MPU_9250_SENSOR_TYPE_GYRO_Y);
   gZ = mpu_9250_sensor.value(MPU_9250_SENSOR_TYPE_GYRO_Z);
@@ -65,11 +69,11 @@ static bool is_movement() {
   accY = mpu_9250_sensor.value(MPU_9250_SENSOR_TYPE_ACC_Y);
   accZ = mpu_9250_sensor.value(MPU_9250_SENSOR_TYPE_ACC_Z);
 
-  int accel_magn_squared = accX * accX + accY * accY + accZ*accZ;
+  int accel_magn_squared = accX * accX + accY * accY + accZ * accZ;
   int gyroXDiff = abs(gX - prev_gX);
   int gyroYDiff = abs(gY - prev_gY);
   int gyroZDiff = abs(gZ - prev_gZ);
-  
+
   bool is_accel_diff = accel_magn_squared > (MOTION_THRESHOLD * MOTION_THRESHOLD);
   bool is_gyro_diff = gyroXDiff > GYRO_THRESHOLD || gyroYDiff > GYRO_THRESHOLD || gyroZDiff > GYRO_THRESHOLD;
 
@@ -80,45 +84,48 @@ static bool is_movement() {
   return is_accel_diff || is_gyro_diff;
 }
 
-static void get_light_reading() {
+static void get_light_reading()
+{
   int value = opt_3001_sensor.value(0);
-  if(value != CC26XX_SENSOR_READING_ERROR) {
-    // printf("OPT: Light=%d.%02d lux\n", value / 100, value % 100);
+  if (value != CC26XX_SENSOR_READING_ERROR)
+  {
     curr_light = value;
   }
   init_opt_reading();
 }
 
-static bool is_light_diff() {
+static bool is_light_different()
+{
   get_light_reading();
 
   bool isAboveThreshold = abs(curr_light - previous_light) > LIGHT_THRESHOLD;
   previous_light = curr_light;
-  
+
   return isAboveThreshold;
 }
 
-
-static void print_statistics() {
-    printf("prev light:%d, curr light: %d\n", previous_light, curr_light);
-    printf("prev gX gY gZ: %d %d %d, cur gX gY gZ: %d %d %d\n", prev_gX, prev_gY, prev_gZ, gX, gY, gZ);
-    printf("curr accX accY accZ: %d %d %d\n", accX, accY, accZ);
+static void print_statistics()
+{
+  printf("prev light:%d, curr light: %d\n", previous_light, curr_light);
+  printf("prev gX gY gZ: %d %d %d, cur gX gY gZ: %d %d %d\n", prev_gX, prev_gY, prev_gZ, gX, gY, gZ);
+  printf("curr accX accY accZ: %d %d %d\n", accX, accY, accZ);
 }
 
-
-PROCESS_THREAD(state_change, ev, data) {
+PROCESS_THREAD(state_change, ev, data)
+{
   PROCESS_BEGIN();
-  //Initialize buzzer and sensors
+
+  // Initialize buzzer and sensors
   buzzer_init();
   init_opt_reading();
   init_mpu_reading();
   printf("Program start\n\n");
 
-  //Let timer warm up to get reading
+  // Let timer warm up to get reading
   etimer_set(&delay_timer, CLOCK_SECOND);
   PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&delay_timer));
 
-  // initialise variables
+  // Initialise variables
   get_light_reading();
   previous_light = curr_light;
   prev_gX = mpu_9250_sensor.value(MPU_9250_SENSOR_TYPE_GYRO_X);
@@ -127,86 +134,82 @@ PROCESS_THREAD(state_change, ev, data) {
 
   print_statistics();
 
-  while(1) {
-    is_light_diff() ;
-    etimer_set(&delay_timer, CLOCK_SECOND/4);
+  while (1)
+  {
+    etimer_set(&delay_timer, CLOCK_SECOND / 4);
     PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&delay_timer));
 
-    if (is_movement() && state == IDLE_STATE) {
-        printf("detected movement\n");
-        printf("IDLE -> INTERIM\n");
-        print_statistics();
-        state = INTERIM_STATE;
-        is_idle = false;
-        continue;
-    }
-    // if (is_light_diff() && (state == WAIT_STATE || state == BUZZ_STATE)) {
-    //     printf("detected light\n");
-    //     printf("IDLE\n");
-    //     if (buzzer_state()) {
-    //         buzzer_stop();
-    //     }
-    //     state = IDLE_STATE;
-    //     continue;
-    // }
-    if (state == INTERIM_STATE && is_light_diff()) {
-        printf("detected light\n");
-        printf("INTERIM -> BUZZ\n");
-        state = BUZZ_STATE;
-        isFirstRun = true;
-        continue;
-    }
-    if (state == BUZZ_STATE) {
-        // printf("isFirstRun: %s\n", isFirstRun ? "true": "false");
-        if (isFirstRun) {
-            printf("BUZZ -> WAIT\n");
-            buzzer_start(2069);
-            etimer_set(&buzzer_timer, CLOCK_SECOND*2);
-            state = WAIT_STATE;
-        } else if (is_light_diff()) {
-            if (buzzer_state()) {
-                buzzer_stop();
-            }
-            printf("detected light\n");
-            printf("BUZZ -> IDLE\n");
-            state = IDLE_STATE;
-        } else if (etimer_expired(&wait_timer)) {
-            buzzer_start(2069);
-            etimer_set(&buzzer_timer, CLOCK_SECOND*2);
-            is_idle = is_light_diff();
-            state = WAIT_STATE;
-            printf("BUZZ -> WAIT\n");
-        }
-        continue;
-    }
-    if (state == WAIT_STATE) {
-        if (!etimer_expired(&buzzer_timer)) {
-            continue;
-        }
-        buzzer_stop();
-        if (isFirstRun) {
-            etimer_set(&wait_timer, CLOCK_SECOND*4);
-            isFirstRun = false;
-            state = BUZZ_STATE;
-            // PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&wait_timer));
-            printf("WAIT -> BUZZ\n");
-        } else if (is_idle || is_light_diff()) {
-            printf("detected light\n");
-            printf("WAIT -> IDLE\n");
-            state = IDLE_STATE;
-        } else {
-            state = BUZZ_STATE;
-            etimer_set(&wait_timer, CLOCK_SECOND*4);
-            is_idle = is_light_diff();
-            // PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&wait_timer));
-            printf("WAIT -> BUZZ\n");
-        }
-        continue;
+    bool is_light_change_detected = is_light_different();
+    bool is_motion_detected = is_movement();
 
+    if (state == IDLE_STATE && is_motion_detected)
+    {
+      state = INTERIM_STATE;
+      printf("detected movement\n");
+      printf("IDLE -> INTERIM\n");
+    }
+    else if (state == INTERIM_STATE && is_light_change_detected)
+    {
+      state = BUZZ_STATE;
+      is_first_run = true;
+      printf("detected light change\n");
+      printf("INTERIM -> BUZZ\n");
+    }
+    else if (state == BUZZ_STATE)
+    {
+      if (!is_state_running)
+      {
+        buzzer_start(2069);
+        etimer_set(&buzzer_timer, CLOCK_SECOND * 2);
+        is_state_running = true;
+      }
+
+      if (!is_first_run && is_light_change_detected)
+      {
+        if (buzzer_state())
+        {
+          buzzer_stop();
+        }
+        is_state_running = false;
+        state = IDLE_STATE;
+        printf("detected light\n");
+        printf("BUZZ -> IDLE\n");
+      }
+      else if (etimer_expired(&buzzer_timer))
+      {
+        if (buzzer_state())
+        {
+          buzzer_stop();
+        }
+        is_state_running = false;
+        state = WAIT_STATE;
+        printf("BUZZ -> WAIT\n");
+      }
+    }
+    else if (state == WAIT_STATE)
+    {
+      if (!is_state_running)
+      {
+        etimer_set(&wait_timer, CLOCK_SECOND * 4);
+        is_state_running = true;
+      }
+
+      if (!is_first_run && is_light_change_detected)
+      {
+        state = IDLE_STATE;
+        is_state_running = false;
+        printf("detected light\n");
+        printf("WAIT -> IDLE\n");
+      }
+      else if (etimer_expired(&wait_timer))
+      {
+        state = BUZZ_STATE;
+        is_state_running = false;
+        is_first_run = false;
+        printf("WAIT -> BUZZ\n");
+      }
     }
     PROCESS_PAUSE();
   }
   PROCESS_END();
 }
-
-
