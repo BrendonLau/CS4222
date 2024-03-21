@@ -12,7 +12,7 @@
 #define LOG_LEVEL LOG_LEVEL_INFO
 
 /* Configuration */
-#define SEND_INTERVAL (8 * CLOCK_SECOND)
+#define SEND_INTERVAL (0.25 * CLOCK_SECOND)
 static linkaddr_t dest_addr = {{0x00, 0x12, 0x4b, 0x00, 0x11, 0xa7, 0x73, 0x87}}; // replace this with your receiver's link address
 
 /*---------------------------------------------------------------------------*/
@@ -26,7 +26,7 @@ void input_callback(const void *data, uint16_t len, const linkaddr_t *src, const
   {
     unsigned count;
     memcpy(&count, data, sizeof(count));
-    printf("Received %u with rssi %d from", count, (signed short)packetbuf_attr(PACKETBUF_ATTR_RSSI));
+    printf("\nReceived %u with rssi %d from", count, (signed short)packetbuf_attr(PACKETBUF_ATTR_RSSI));
     LOG_INFO_LLADDR(src);
     printf("\n");
   }
@@ -50,7 +50,7 @@ PROCESS_THREAD(unicast_process, ev, data)
     while (1)
     {
       PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&periodic_timer));
-      printf("Sending %u to ", count);
+      printf("\nSending %u to ", count);
       LOG_INFO_LLADDR(&dest_addr);
       printf("\n");
 
