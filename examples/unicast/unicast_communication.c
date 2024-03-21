@@ -26,9 +26,9 @@ void input_callback(const void *data, uint16_t len, const linkaddr_t *src, const
   {
     unsigned count;
     memcpy(&count, data, sizeof(count));
-    LOG_INFO("Received %u with rssi %d from", count, (signed short)packetbuf_attr(PACKETBUF_ATTR_RSSI));
+    printf("Received %u with rssi %d from", count, (signed short)packetbuf_attr(PACKETBUF_ATTR_RSSI));
     LOG_INFO_LLADDR(src);
-    LOG_INFO_("\n");
+    printf("\n");
   }
 }
 /*---------------------------------------------------------------------------*/
@@ -50,9 +50,9 @@ PROCESS_THREAD(unicast_process, ev, data)
     while (1)
     {
       PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&periodic_timer));
-      LOG_INFO("Sending %u to ", count);
+      printf("Sending %u to ", count);
       LOG_INFO_LLADDR(&dest_addr);
-      LOG_INFO_("\n");
+      printf("\n");
 
       NETSTACK_NETWORK.output(&dest_addr); // Packet transmission
       count++;
