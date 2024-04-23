@@ -1,0 +1,1203 @@
+Send seq# 1  @       38 ticks     0.296
+Received neighbour discovery packet 57 with rssi Send seq# 2  @       50 ticks     0.390
+ Sleep for 12 slots
+-53 from 26241Send seq# 3  @      204 ticks     1.593
+Received neighbour discovery packet 64 with rssi -54 from 26241ţ&�fʪ Sleep for 12 slots
+Send seq# 5  @      370 ticks     2.890
+Received neighbour discovery packet 74 with rssi -53 from 26241!V�͍ٕ�ѻѡ�ͥk2ɽ'ų6�ʒ Sleep for 12 slots
+Send seq# 7  @      537 ticks     4.195
+Received neighbour discovery packet 80 with rssi -53 from 26241�Vʢ�&� Sleep for 12 slots
+Send seq# 9  @      703 ticks     5.492
+Send seq# 10  @      716 ticks     5.593
+ Sleep for 12 slots
+Send seq# 11  @      869 ticks     6.789
+Send seq# 12  @      882 ticks     6.890
+ Sleep for 12 slots
+Send seq# 13  @     1036 ticks     8.093
+Received neighbour discovery packet 102 with rssi -53 from 26241ŋʢ�ʪ Sleep for 12 slots
+Send seq# 15  @     1202 ticks     9.390
+Send seq# 16  @     1215 ticks     9.492
+ Sleep for 12 slots
+Send seq# 17  @     1369 ticks    10.695
+Send seq# 18  @     1381 ticks    10.789
+ Sleep for 12 slots
+Send seq# 19  @     1535 ticks    11.992
+Send seq# 20  @     1548 ticks    12.093
+ Sleep for 12 slots
+Send seq# 21  @     1701 ticks    13.289
+Received neighbour discovery packet 103 with rssi -53 from 26241
+Received neighbour discovery packet 132 with rssi -52 from 26241œ�6ʂ Sleep for 12 slots
+Send seq# 23  @     1868 ticks    14.593
+Send seq# 24  @     1880 ticks    14.687
+ Sleep for 12 slots
+Send seq# 25  @     2034 ticks    15.890
+Received neighbour discovery packet 148 with rssi -53 from 26241œ&�ʒ Sleep for 12 slots
+Send seq# 27  @     2201 ticks    17.195
+Received neighbour discovery packet 154 with rssi -51 from 26241œ�&�&� Sleep for 12 slots
+Send seq# 29  @     2367 ticks    18.492
+Received neighbour discovery packet 166 with rssi -53 from 26241ś&��ʚ Sleep for 12 slots
+Send seq# 31  @     2533 ticks    19.789
+Send seq# 32  @     2546 ticks    19.890
+ Sleep for 12 slots
+Send seq# 33  @     2700 ticks    21.093
+Received neighbour discovery packet 177 with rssi -52 from 26241ś&�&º Sleep for 12 slots
+Send seq# 35  @     2866 ticks    22.390
+Send seq# 36  @     2879 ticks    22.492
+ Sleep for 12 slots
+Send seq# 37  @     3032 ticks    23.687
+Send seq# 38  @     3045 ticks    23.789
+ Sleep for 12 slots
+Send seq# 39  @     3199 ticks    24.992
+Received neighbour discovery packet Send seq# 40  @     3212 ticks    25.093
+ Sleep for 12 slots
+200 with rssi -52 from 26241
+Send seq# 41  @     3365 ticks    26.289
+Send seq# 42  @     3378 ticks    26.390
+ Sleep for 12 slots
+Send seq# 43  @     3532 ticks    27.593
+Send seq# 44  @     3544 ticks    27.687
+ Sleep for 12 slots
+Send seq# 45  @     3698 ticks    28.890
+Received neighbour discovery packet 222 with rssi -52 from 26241ţ�&ʒ Sleep for 12 slots
+Send seq# 47  @     3864 ticks    30.187
+Received neighbour discovery packet 228 with rssi -51 from 26241
+Received neighbour discovery packet 229 with rssi -52Send seq# 48  @     3877 ticks    30.289
+ Sleep for 12 slots
+ from 26241
+Send seq# 49  @     4031 ticks    31.492
+Send seq# 50  @     4043 ticks    31.585
+ Sleep for 12 slots
+Send seq# 51  @     4197 ticks    32.789
+Send seq# 52  @     4210 ticks    32.890
+ Sleep for 12 slots
+Send seq# 53  @     4364 ticks    34.093
+Send seq# 54  @     4376 ticks    34.187
+ Sleep for 12 slots
+Send seq# 55  @     4530 ticks    35.390
+Received neighbour discovery packet 261 with rssi -50 from 26241ūF�6Fʒ Sleep for 12 slots
+Send seq# 57  @     4696 ticks    36.687
+Send seq# 58  @     4709 ticks    36.789
+ Sleep for 12 slots
+Send seq# 59  @     4863 ticks    37.992
+Received neighbour discovery packet 275 with rssi Send seq# 60  @     4875 ticks    38.085
+ Sleep for 12 slots
+-49 from 26241
+Send seq# 61  @     5029 ticks    39.289
+Received neighbour discovery packet 282 with rssi -49 from 26241ųV�6�ʂ Sleep for 12 slots
+Send seq# 63  @     5195 ticks    40.585
+Received neighbour discovery packet 289 with rssi -49 from 26241ųV¢�Ffº Sleep for 12 slots
+Send seq# 65  @     5362 ticks    41.890
+Received neighbour discovery packet 297 with rssi -50 from 26241ųV�Fʒ Sleep for 12 slots
+Send seq# 67  @     5528 ticks    43.187
+Received neighbour discovery packet 303 with rssi -50 from 26241ų�V�F&� Sleep for 12 slots
+Send seq# 69  @     5695 ticks    44.492
+Received neighbour discovery packet 309 with rssi -50 from 26241ŻV�FVª Sleep for 12 slots
+Send seq# 71  @     5861 ticks    45.789
+Send seq# 72  @     5874 ticks    45.890
+ Sleep for 12 slots
+Send seq# 73  @     6027 ticks    47.085
+Send seq# 74  @     6040 ticks    47.187
+ Sleep for 12 slots
+Send seq# 75  @     6194 ticks    48.390
+Send seq# 76  @     6206 ticks    48.484
+ Sleep for 12 slots
+Send seq# 77  @     6360 ticks    49.687
+Received neighbour discovery packet 334 with rssi -49 from 26241
+Received neighbour discovery packet 335 with rssi -49 from 26241Ż�f�F�� Sleep for 12 slots
+Send seq# 79  @     6527 ticks    50.992
+Received neighbour discovery packet 344 with rssi -52 from 26241�fʢ�Vª Sleep for 12 slots
+Send seq# 81  @     6693 ticks    52.289
+Send seq# 82  @     6706 ticks    52.390
+ Sleep for 12 slots
+Send seq# 83  @     6859 ticks    53.585
+Received neighbour discovery packet 362 with rssi -52 from 26241�fº�Vfº Sleep for 12 slots
+Send seq# 85  @     7026 ticks    54.890
+Received neighbour discovery packet 369 with rssi -51 from 26241�v¢�V¢ Sleep for 12 slots
+Send seq# 87  @     7192 ticks    56.187
+Send seq# 88  @     7205 ticks    56.289
+ Sleep for 12 slots
+Send seq# 89  @     7359 ticks    57.492
+Send seq# 90  @     7371 ticks    57.585
+ Sleep for 12 slots
+Send seq# 91  @     7525 ticks    58.789
+Send seq# 92  @     7538 ticks    58.890
+ Sleep for 12 slots
+Send seq# 93  @     7691 ticks    60.085
+Received neighbour discovery packet 400 with rssi -52 from 26241��fº Sleep for 12 slots
+Send seq# 95  @     7858 ticks    61.390
+Received neighbour discovery packet 406 with rssi -53 from 26241!V�͍ٕ�ѣѡ�ͥkV2ɽ'�vº�fF¢ Sleep for 12 slots
+Send seq# 97  @     8024 ticks    62.687
+Received neighbour discovery packet 414 with rssi -51 from 26241���fv� Sleep for 12 slots
+Send seq# 99  @     8190 ticks    63.984
+Send seq# 100  @     8203 ticks    64.085
+ Sleep for 12 slots
+Send seq# 101  @     8357 ticks    65.289
+Received neighbour discovery packet 437 with rssi -52 from 26241�ʢ�f6 Sleep for 12 slots
+Send seq# 103  @     8523 ticks    66.585
+Received neighbour discovery packet 446 with rssi -51 from 26241ŋ�ffº Sleep for 12 slots
+Send seq# 105  @     8690 ticks    67.890
+Send seq# 106  @     8702 ticks    67.984
+ Sleep for 12 slots
+Send seq# 107  @     8856 ticks    69.187
+Received neighbour discovery packet 459 with rssi -52 from 26241ŋ�²ʢ�f�� Sleep for 12 slots
+Send seq# 109  @     9022 ticks    70.484
+Received neighbour discovery packet 465 with rssi -53 from 26241ŋʂ�vVª Sleep for 12 slots
+Send seq# 111  @     9189 ticks    71.789
+Received neighbour discovery packet 471 with rssi -52 from 26241ŋ�v Sleep for 12 slots
+Send seq# 113  @     9355 ticks    73.085
+Received neighbour discovery packet 477 with rssi -53 from 26241ŋʚ¢�vº Sleep for 12 slots
+Send seq# 115  @     9522 ticks    74.390
+Received neighbour discovery packet 483 with rssi -53 from 26241ŋʪ�vF¢ Sleep for 12 slots
+Send seq# 117  @     9688 ticks    75.687
+Received neighbour discovery packet 488 with rssi -52 from 26241ŋ��vv� Sleep for 12 slots
+Send seq# 119  @     9854 ticks    76.984
+Send seq# 120  @     9867 ticks    77.085
+ Sleep for 12 slots
+Send seq# 121  @    10021 ticks    78.289
+Received neighbour discovery packet 503 with rssi -53 from 26241ŋ�v� Sleep for 12 slots
+Send seq# 123  @    10187 ticks    79.585
+Send seq# 124  @    10200 ticks    79.687
+ Sleep for 12 slots
+Send seq# 125  @    10353 ticks    80.882
+Received neighbour discovery packet 521 with rssi -53 from 26241!V�͍ٕ�ѫѡ�ͥk2ɽ'ŋ�¢ Sleep for 12 slots
+Send seq# 127  @    10520 ticks    82.187
+Send seq# 128  @    10532 ticks    82.281
+ Sleep for 12 slots
+Send seq# 129  @    10686 ticks    83.484
+Send seq# 130  @    10699 ticks    83.585
+ Sleep for 12 slots
+Send seq# 131  @    10853 ticks    84.789
+Received neighbour discovery packet 550 with rssi -52 from 26241ŋ²� Sleep for 12 slots
+Send seq# 133  @    11019 ticks    86.085
+Received neighbour discovery packet 556 with rssi -52 from 26241ŋ�º Sleep for 12 slots
+Send seq# 135  @    11185 ticks    87.382
+Received neighbour discovery packet 557 with rssi -51 from 26241
+Received neighbour discovery packet 564 with rssi -53 from 26241ŋ��F¢ Sleep for 12 slots
+Send seq# 137  @    11352 ticks    88.687
+Send seq# 138  @    11364 ticks    88.781
+ Sleep for 12 slots
+Send seq# 139  @    11518 ticks    89.984
+Received neighbour discovery packet 581 with rssi -53 from 26241
+Send seq# 140  @    11531 ticks    90.085
+ Sleep for 12 slots
+Send seq# 141  @    11685 ticks    91.289
+Send seq# 142  @    11697 ticks    91.382
+ Sleep for 12 slots
+Send seq# 143  @    11851 ticks    92.585
+Received neighbour discovery packet 595 with rssi -56 from 26241ŋ²�fº Sleep for 12 slots
+Send seq# 145  @    12017 ticks    93.882
+Received neighbour discovery packet 603 with rssi -53 from 26241Received neighbour discovery packet 604 with rssi -53 from 26241ŋ�¢ Sleep for 12 slots
+Send seq# 147  @    12184 ticks    95.187
+Received neighbour discovery packet 615 with rssi -65 from 26241ŋ�ʲ�& Sleep for 12 slots
+Send seq# 149  @    12350 ticks    96.484
+Send seq# 150  @    12363 ticks    96.585
+ Sleep for 12 slots
+Send seq# 151  @    12516 ticks    97.781
+Received neighbour discovery packet 631 with rssi -48 from 26241ŋʢ� Sleep for 12 slots
+Send seq# 153  @    12683 ticks    99.085
+Send seq# 154  @    12695 ticks    99.179
+ Sleep for 12 slots
+Send seq# 155  @    12849 ticks   100.382
+Received neighbour discovery packet 646 with rssi -50 from 26241!V�͍ٕ�ѳѡ�ͥk͕ŋ²͋F¢ Sleep for 12 slots
+50 from 26241
+Send seq# 157  @    13016 ticks   101.687
+Received neighbour discovery packet 656 with rssi -50 from 26241ŋ�¢�v Sleep for 12 slots
+Send seq# 159  @    13182 ticks   102.984
+Send seq# 160  @    13195 ticks   103.085
+ Sleep for 12 slots
+Send seq# 161  @    13348 ticks   104.281
+Send seq# 162  @    13361 ticks   104.382
+ Sleep for 12 slots
+Send seq# 163  @    13515 ticks   105.585
+Send seq# 164  @    13527 ticks   105.679
+ Sleep for 12 slots
+Send seq# 165  @    13681 ticks   106.882
+Send seq# 166  @    13694 ticks   106.984
+ Sleep for 12 slots
+Send seq# 167  @    13848 ticks   108.187
+Send seq# 168  @    13860 ticks   108.281
+ Sleep for 12 slots
+Send seq# 169  @    14014 ticks   109.484
+Received neighbour discovery packet 697 with rssi -53 from 26241ŋ͋�ª Sleep for 12 slots
+Send seq# 171  @    14180 ticks   110.781
+Received neighbour discovery packet 708 with rssi -50 from 26241ŋʚ͋ Sleep for 12 slots
+Send seq# 173  @    14347 ticks   112.085
+Send seq# 174  @    14359 ticks   112.179
+ Sleep for 12 slots
+Send seq# 175  @    14513 ticks   113.382
+Send seq# 176  @    14526 ticks   113.484
+ Sleep for 12 slots
+Send seq# 177  @    14679 ticks   114.679
+Received neighbour discovery packet 729 with rssi -50 from 26241��ʒ͋v Sleep for 12 slots
+Send seq# 179  @    14846 ticks   115.984
+Send seq# 180  @    14858 ticks   116.078
+ Sleep for 12 slots
+Send seq# 181  @    15012 ticks   117.281
+Received neighbour discovery packet 743 with rssi -49 from 26241ŋ͋6 Sleep for 12 slots
+Send seq# 183  @    15179 ticks   118.585
+Send seq# 184  @    15191 ticks   118.679
+ Sleep for 12 slots
+Send seq# 185  @    15345 ticks   119.882
+Received neighbour discovery packet 761 with rssi -48 from 26241ŋ²¢͋ʖ¢ Sleep for 12 slots
+Send seq# 187  @    15511 ticks   121.179
+Received neighbour discovery packet 768 with rssi -49 from 26241!V�͍ٕ�ѻʺѡ�ͥk2ɽ'ŋ�͋& Sleep for 12 slots
+Send seq# 189  @    15678 ticks   122.484
+Send seq# 190  @    15690 ticks   122.578
+ Sleep for 12 slots
+Send seq# 191  @    15844 ticks   123.781
+Send seq# 192  @    15857 ticks   123.882
+ Sleep for 12 slots
+Send seq# 193  @    16011 ticks   125.085
+Send seq# 194  @    16023 ticks   125.179
+ Sleep for 12 slots
+Send seq# 195  @    16177 ticks   126.382
+Send seq# 196  @    16190 ticks   126.484
+ Sleep for 12 slots
+Send seq# 197  @    16343 ticks   127.679
+Received neighbour discovery packet 805 with rssi -51 from 26241ŋ�͋v Sleep for 12 slots
+Send seq# 199  @    16510 ticks   128.984
+Received neighbour discovery packet 814 with rssi -50 from 26241œ͋�� Sleep for 12 slots
+Send seq# 201  @    16676 ticks   130.281
+Send seq# 202  @    16689 ticks   130.382
+ Sleep for 12 slots
+Send seq# 203  @    16842 ticks   131.578
+Received neighbour discovery packet 830 with rssi -50 from 26241œª͋f� Sleep for 12 slots
+Send seq# 205  @    17009 ticks   132.882
+Received neighbour discovery packet 837 with rssi -48 from 26241œ͋ Sleep for 12 slots
+Send seq# 207  @    17175 ticks   134.179
+Received neighbour discovery packet 844 with rssi -49 from 26241œ��͋& Sleep for 12 slots
+Send seq# 209  @    17342 ticks   135.484
+Send seq# 210  @    17354 ticks   135.578
+ Sleep for 12 slots
+Send seq# 211  @    17508 ticks   136.781
+Received neighbour discovery packet 857 with rssi -50 from 26241œ͋ Sleep for 12 slots
+Send seq# 213  @    17674 ticks   138.078
+Send seq# 214  @    17687 ticks   138.179
+ Sleep for 12 slots
+Send seq# 215  @    17841 ticks   139.382
+Received neighbour discovery packet 872 with rssi -50 from 26241œª͋� Sleep for 12 slots
+Send seq# 217  @    18007 ticks   140.679
+Send seq# 218  @    18020 ticks   140.781
+ Sleep for 12 slots
+Send seq# 219  @    18174 ticks   141.984
+Send seq# 220  @    18186 ticks   142.078
+ Sleep for 12 slots
+Send seq# 221  @    18340 ticks   143.281
+Received neighbour discovery packet 890 with rssi -51 from 26241œ�6 Sleep for 12 slots
+Send seq# 223  @    18506 ticks   144.578
+Send seq# 224  @    18519 ticks   144.679
+ Sleep for 12 slots
+Send seq# 225  @    18673 ticks   145.882
+Received neighbour discovery packet 903 with rssi -51 from 26241œ²ª͋ Sleep for 12 slots
+Send seq# 227  @    18839 ticks   147.179
+Received neighbour discovery packet 908 with rssi -50 from 26241œ��͋& Sleep for 12 slots
+Send seq# 229  @    19005 ticks   148.476
+Send seq# 230  @    19018 ticks   148.578
+ Sleep for 12 slots
+Send seq# 231  @    19172 ticks   149.781
+Received neighbour discovery packet 921 with rssi -52 from 26241œʊ¢͋ʆ Sleep for 12 slots
+Send seq# 233  @    19338 ticks   151.078
+Send seq# 234  @    19351 ticks   151.179
+ Sleep for 12 slots
+Send seq# 235  @    19505 ticks   152.382
+Send seq# 236  @    19517 ticks   152.476
+ Sleep for 12 slots
+Send seq# 237  @    19671 ticks   153.679
+Send seq# 238  @    19684 ticks   153.781
+ Sleep for 12 slots
+Send seq# 239  @    19837 ticks   154.976
+Received neighbour discovery packet 947 with rssi -50 from 26241œ�͋� Sleep for 12 slots
+Send seq# 241  @    20004 ticks   156.281
+Received neighbour discovery packet 956 with rssi -50 from 26241œ͋6 Sleep for 12 slots
+Send seq# 243  @    20170 ticks   157.578
+Received neighbour discovery packet 961 with rssi -50 from 26241œ͋f� Sleep for 12 slots
+Send seq# 245  @    20337 ticks   158.882
+Send seq# 246  @    20349 ticks   158.976
+ Sleep for 12 slots
+Send seq# 247  @    20503 ticks   160.179
+Received neighbour discovery packet 977 with rssi -50 from 26241œ�͋& Sleep for 12 slots
+Send seq# 249  @    20669 ticks   161.476
+Send seq# 250  @    20682 ticks   161.578
+ Sleep for 12 slots
+Send seq# 251  @    20836 ticks   162.781
+Received neighbour discovery packet 993Send seq# 252  @    20848 ticks   162.875
+ Sleep for 12 slots
+ with rssi -51 from 26241
+Send seq# 253  @    21002 ticks   164.078
+Send seq# 254  @    21015 ticks   164.179
+ Sleep for 12 slots
+Send seq# 255  @    21168 ticks   165.375
+Received neighbour discovery packet 1010 with rssi -53 from 26241œ͋F Sleep for 12 slots
+Send seq# 257  @    21335 ticks   166.679
+Received neighbour discovery packet 1017Send seq# 258  @    21347 ticks   166.773
+ Sleep for 12 slots
+ with rssi -49 from 26241
+Send seq# 259  @    21501 ticks   167.976
+Received neighbour discovery packet 1024 with rssi -48 from 26241œ͋�� Sleep for 12 slots
+Send seq# 261  @    21668 ticks   169.281
+Send seq# 262  @    21680 ticks   169.375
+ Sleep for 12 slots
+Send seq# 263  @    21834 ticks   170.578
+Received neighbour discovery packet 1037 with rssi -51 from 26241œ¢͋f� Sleep for 12 slots
+Send seq# 265  @    22000 ticks   171.875
+Received neighbour discovery packet 1043 with rssi -50 from 26241œ͋ Sleep for 12 slots
+Send seq# 267  @    22167 ticks   173.179
+Send seq# 268  @    22179 ticks   173.273
+ Sleep for 12 slots
+Send seq# 269  @    22333 ticks   174.476
+Send seq# 270  @    22346 ticks   174.578
+ Sleep for 12 slots
+Send seq# 271  @    22500 ticks   175.781
+Send seq# 272  @    22512 ticks   175.875
+ Sleep for 12 slots
+Send seq# 273  @    22666 ticks   177.078
+Received neighbour discovery packet 1070Send seq# 274  @    22679 ticks   177.179
+ Sleep for 12 slots
+ with rssi -50 from 26241
+Send seq# 275  @    22832 ticks   178.375
+Send seq# 276  @    22845 ticks   178.476
+ Sleep for 12 slots
+Send seq# 277  @    22999 ticks   179.679
+Received neighbour discovery packet 1087 with rssi -50 from 26241œ�͋� Sleep for 12 slots
+Send seq# 279  @    23165 ticks   180.976
+Send seq# 280  @    23178 ticks   181.078
+ Sleep for 12 slots
+Send seq# 281  @    23331 ticks   182.273
+Received neighbour discovery packet 1100 with rssi -49 from 26241œ͋6 Sleep for 12 slots
+Send seq# 283  @    23498 ticks   183.578
+Send seq# 284  @    23510 ticks   183.671
+ Sleep for 12 slots
+Send seq# 285  @    23664 ticks   184.875
+Send seq# 286  @    23677 ticks   184.976
+ Sleep for 12 slots
+Send seq# 287  @    23831 ticks   186.179
+Send seq# 288  @    23843 ticks   186.273
+ Sleep for 12 slots
+Send seq# 289  @    23997 ticks   187.476
+Send seq# 290  @    24010 ticks   187.578
+ Sleep for 12 slots
+Send seq# 291  @    24163 ticks   188.773
+Send seq# 292  @    24176 ticks   188.875
+ Sleep for 12 slots
+Send seq# 293  @    24330 ticks   190.078
+Send seq# 294  @    24342 ticks   190.171
+ Sleep for 12 slots
+Send seq# 295  @    24496 ticks   191.375
+Received neighbour discovery packet 1148 with rssi -50 from 26241œʲʢ͋ʊF Sleep for 12 slots
+Send seq# 297  @    24663 ticks   192.679
+Send seq# 298  @    24675 ticks   192.773
+ Sleep for 12 slots
+Send seq# 299  @    24829 ticks   193.976
+Received neighbour discovery packet 1162 with rssi -53 from 26241�¢͋ʢv� Sleep for 12 slots
+Send seq# 301  @    24995 ticks   195.273
+Received neighbour discovery packet 1168 with rssi -50 from 26241ś¢͋ʪ6 Sleep for 12 slots
+Send seq# 303  @    25162 ticks   196.578
+Send seq# 304  @    25174 ticks   196.671
+ Sleep for 12 slots
+Send seq# 305  @    25328 ticks   197.875
+Send seq# 306  @    25341 ticks   197.976
+ Sleep for 12 slots
+Send seq# 307  @    25494 ticks   199.171
+Received neighbour discovery packet 1190 with rssi -54 from 26241��͋�& Sleep for 12 slots
+Send seq# 309  @    25661 ticks   200.476
+Received neighbour discovery packet 1196 with rssi -56 from 26241ś͓V Sleep for 12 slots
+Send seq# 311  @    25827 ticks   201.773
+Received neighbour discovery packet 1202 with rssi -58 from 26241ś¢͓ Sleep for 12 slots
+Send seq# 313  @    25994 ticks   203.078
+Send seq# 314  @    26006 ticks   203.171
+ Sleep for 12 slots
+Send seq# 315  @    26160 ticks   204.375
+Send seq# 316  @    26173 ticks   204.476
+ Sleep for 12 slots
+Send seq# 317  @    26326 ticks   205.671
+Received neighbour discovery packet 1221 with rssi -51 from 26241ś�ʢ͓v Sleep for 12 slots
+Send seq# 319  @    26493 ticks   206.976
+Send seq# 320  @    26505 ticks   207.070
+ Sleep for 12 slots
+Send seq# 321  @    26659 ticks   208.273
+Received neighbour discovery packet 1232 with rssi -53 from 26241ś͓� Sleep for 12 slots
+Send seq# 323  @    26826 ticks   209.578
+Received neighbour discovery packet 1237 with rssi -56 from 26241ś¢͓� Sleep for 12 slots
+Send seq# 325  @    26992 ticks   210.875
+Send seq# 326  @    27005 ticks   210.976
+ Sleep for 12 slots
+Send seq# 327  @    27158 ticks   212.171
+Send seq# 328  @    27171 ticks   212.273
+ Sleep for 12 slots
+Send seq# 329  @    27325 ticks   213.476
+Send seq# 330  @    27337 ticks   213.570
+ Sleep for 12 slots
+Send seq# 331  @    27491 ticks   214.773
+Received neighbour discovery packet 1263 with rssi -54 from 26241ś͓ Sleep for 12 slots
+Send seq# 333  @    27657 ticks   216.070
+Send seq# 334  @    27670 ticks   216.171
+ Sleep for 12 slots
+Send seq# 335  @    27824 ticks   217.375
+Received neighbour discovery packet 1277 with rssi -53 from 26241ś͓F Sleep for 12 slots
+Send seq# 337  @    27990 ticks   218.671
+Received neighbour discovery packet 1286 with rssi -56 from 26241ś�͓� Sleep for 12 slots
+Send seq# 339  @    28157 ticks   219.976
+Received neighbour discovery packet 1294 with rssi -59 from 26241͕śʢ�v Sleep for 12 slots
+Send seq# 341  @    28323 ticks   221.273
+Send seq# 342  @    28336 ticks   221.375
+ Sleep for 12 slots
+Send seq# 343  @    28489 ticks   222.570
+Received neighbour discovery packet 1310 with rssi -53 from 26241śª͓f Sleep for 12 slots
+Send seq# 345  @    28656 ticks   223.875
+Send seq# 346  @    28668 ticks   223.968
+ Sleep for 12 slots
+Send seq# 347  @    28822 ticks   225.171
+Received neighbour discovery packet 1326 with rssi -56 from 26241!V�͍ٕ�ыѡ�ͥkV2ɽ'ś��͓& Sleep for 12 slots
+Send seq# 349  @    28989 ticks   226.476
+Send seq# 350  @    29001 ticks   226.570
+ Sleep for 12 slots
+Send seq# 351  @    29155 ticks   227.773
+Received neighbour discovery packet 1338 with rssi -59 from 26241śʊ¢͓ Sleep for 12 slots
+Send seq# 353  @    29321 ticks   229.070
+Received neighbour discovery packet 1343 with rssi -56 from 26241śʚ͓� Sleep for 12 slots
+Send seq# 355  @    29488 ticks   230.375
+Received neighbour discovery packet 1352 with rssi -57 from 26241śʪ͓F� Sleep for 12 slots
+Send seq# 357  @    29654 ticks   231.671
+Received neighbour discovery packet 135Send seq# 358  @    29667 ticks   231.773
+ Sleep for 12 slots
+8 with rssi -55 from 26241
+Send seq# 359  @    29820 ticks   232.968
+Received neighbour discovery packet 1369 with rssi -55 from 26241ś�͓ Sleep for 12 slots
+Send seq# 361  @    29987 ticks   234.273
+Received neighbour discovery packet 1376 with rssi -53 from 26241ś͓6 Sleep for 12 slots
+Send seq# 363  @    30153 ticks   235.570
+Received neighbour discovery packet 1383 with rssi -55 from 26241ś͓f Sleep for 12 slots
+Send seq# 365  @    30320 ticks   236.875
+Send seq# 366  @    30332 ticks   236.968
+ Sleep for 12 slots
+Send seq# 367  @    30486 ticks   238.171
+Send seq# 368  @    30499 ticks   238.273
+ Sleep for 12 slots
+Send seq# 369  @    30652 ticks   239.468
+Send seq# 370  @    30665 ticks   239.570
+ Sleep for 12 slots
+Send seq# 371  @    30819 ticks   240.773
+Received neighbour discovery packet 1411 with rssi -52 from 26241ś͓ Sleep for 12 slots
+Send seq# 373  @    30985 ticks   242.070
+Received neighbour discovery packet 1422 with rssi -53 from 26241ś�¢͓ Sleep for 12 slots
+Send seq# 375  @    31152 ticks   243.375
+Send seq# 376  @    31164 ticks   243.468
+ Sleep for 12 slots
+Send seq# 377  @    31318 ticks   244.671
+Send seq# 378  @    31331 ticks   244.773
+ Sleep for 12 slots
+Send seq# 379  @    31484 ticks   245.968
+Send seq# 380  @    31497 ticks   246.070
+ Sleep for 12 slots
+Send seq# 381  @    31651 ticks   247.273
+Received neighbour discovery packet 1449 with rssi -51 from 26241ś͓6 Sleep for 12 slots
+Send seq# 383  @    31817 ticks   248.570
+Send seq# 384  @    31830 ticks   248.671
+ Sleep for 12 slots
+Send seq# 385  @    31983 ticks   249.867
+Send seq# 386  @    31996 ticks   249.968
+ Sleep for 12 slots
+Send seq# 387  @    32150 ticks   251.171
+Received neighbour discovery packet 1469 with rssi -49 from 26241ś�͓& Sleep for 12 slots
+Send seq# 389  @    32316 ticks   252.468
+Received neighbour discovery packet 1476 with rssi -52 from 26241śʂʢ͓V Sleep for 12 slots
+Send seq# 391  @    32483 ticks   253.773
+Received neighbour discovery packet 1483 with rssi -53 from 26241śʒʪ͓ Sleep for 12 slots
+Send seq# 393  @    32649 ticks   255.070
+Received neighbour discovery packet Send seq# 394  @    32662 ticks   255.171
+ Sleep for 12 slots
+1493 with rssi -56 from 26241
+Send seq# 395  @    32815 ticks   256.367
+Send seq# 396  @    32828 ticks   256.468
+ Sleep for 12 slots
+Send seq# 397  @    32982 ticks   257.671
+Send seq# 398  @    32994 ticks   257.765
+ Sleep for 12 slots
+Send seq# 399  @    33148 ticks   258.968
+Received neighbour discovery packet 1512 with rssi -84 from 26241ţ͓�v Sleep for 12 slots
+Send seq# 401  @    33315 ticks   260.273
+Received neighbour discovery packet 1522 with rssi -73 from 26241ţ͓6 Sleep for 12 slots
+Send seq# 403  @    33481 ticks   261.570
+Send seq# 404  @    33494 ticks   261.671
+ Sleep for 12 slots
+Send seq# 405  @    33647 ticks   262.867
+Send seq# 406  @    33660 ticks   262.968
+ Sleep for 12 slots
+Send seq# 407  @    33814 ticks   264.171
+Received neighbour discovery packet 1543 with rssi -68 from 26241ţ�͓& Sleep for 12 slots
+Send seq# 409  @    33980 ticks   265.468
+Received neighbour discovery packet 1550 with rssi -66 from 26241ţ�͓V Sleep for 12 slots
+Send seq# 411  @    34146 ticks   266.765
+Send seq# 412  @    34159 ticks   266.867
+ Sleep for 12 slots
+Send seq# 413  @    34313 ticks   268.070
+Send seq# 414  @    34326 ticks   268.171
+ Sleep for 12 slots
+Send seq# 415  @    34479 ticks   269.367
+Send seq# 416  @    34492 ticks   269.468
+ Sleep for 12 slots
+Send seq# 417  @    34646 ticks   270.671
+Received neighbour discovery packet 1585 with rssi -70 from 26241ţ�¢͓v Sleep for 12 slots
+Send seq# 419  @    34812 ticks   271.968
+Send seq# 420  @    34825 ticks   272.070
+ Sleep for 12 slots
+Send seq# 421  @    34978 ticks   273.265
+Send seq# 422  @    34991 ticks   273.367
+ Sleep for 12 slots
+Send seq# 423  @    35145 ticks   274.570
+Received neighbour discovery packet 1609 with rssi -68 from 26241ţ͓f Sleep for 12 slots
+Send seq# 425  @    35311 ticks   275.867
+Send seq# 426  @    35324 ticks   275.968
+ Sleep for 12 slots
+Send seq# 427  @    35478 ticks   277.171
+Send seq# 428  @    35490 ticks   277.265
+ Sleep for 12 slots
+Send seq# 429  @    35644 ticks   278.468
+Send seq# 430  @    35657 ticks   278.570
+ Sleep for 12 slots
+Send seq# 431  @    35810 ticks   279.765
+Send seq# 432  @    35823 ticks   279.867
+ Sleep for 12 slots
+Send seq# 433  @    35977 ticks   281.070
+Send seq# 434  @    35989 ticks   281.164
+ Sleep for 12 slots
+Send seq# 435  @    36143 ticks   282.367
+Received neighbour discovery packet 1649 with rssi -64 from 26241ţ͓F� Sleep for 12 slots
+Send seq# 437  @    36309 ticks   283.664
+Send seq# 438  @    36322 ticks   283.765
+ Sleep for 12 slots
+Send seq# 439  @    36476 ticks   284.968
+Send seq# 440  @    36489 ticks   285.070
+ Sleep for 12 slots
+Send seq# 441  @    36642 ticks   286.265
+Received neighbour discovery packet 1674 with rssi -64 from 26241ţ͓²6 Sleep for 12 slots
+Send seq# 443  @    36809 ticks   287.570
+Received neighbour discovery packet 1679 with rssi -62 from 26241ţ͓ºf Sleep for 12 slots
+Send seq# 445  @    36975 ticks   288.867
+Received neighbour discovery packet 1686 with rssi -60 from 26241��¢͓�� Sleep for 12 slots
+Send seq# 447  @    37141 ticks   290.164
+Received neighbour discovery packet 1700 with rssi -63 from 26241ţ�͓ʂ& Sleep for 12 slots
+Send seq# 449  @    37308 ticks   291.468
+Received neighbour discovery packet 1708 with rssi -64 from 26241!V�͍ٕ��ʺѡ�ͥk2ɽ'ţ͓ʊV Sleep for 12 slots
+Send seq# 451  @    37474 ticks   292.765
+Send seq# 452  @    37487 ticks   292.867
+ Sleep for 12 slots
+Send seq# 453  @    37641 ticks   294.070
+Send seq# 454  @    37653 ticks   294.164
+ Sleep for 12 slots
+Send seq# 455  @    37807 ticks   295.367
+Send seq# 456  @    37820 ticks   295.468
+ Sleep for 12 slots
+Send seq# 457  @    37973 ticks   296.664
+Send seq# 458  @    37986 ticks   296.765
+ Sleep for 12 slots
+Send seq# 459  @    38140 ticks   297.968
+Send seq# 460  @    38152 ticks   298.062
+ Sleep for 12 slots
+Send seq# 461  @    38306 ticks   299.265
+Send seq# 462  @    38319 ticks   299.367
+ Sleep for 12 slots
+Send seq# 463  @    38472 ticks   300.562
+Received neighbour discovery packet 1761 with rssi -63 from 26241�¢ª͛f Sleep for 12 slots
+Send seq# 465  @    38639 ticks   301.867
+Send seq# 466  @    38652 ticks   301.968
+ Sleep for 12 slots
+Send seq# 467  @    38805 ticks   303.164
+Send seq# 468  @    38818 ticks   303.265
+ Sleep for 12 slots
+Send seq# 469  @    38972 ticks   304.468
+Received neighbour discovery packet Send seq# 470  @    38984 ticks   304.562
+ Sleep for 12 slots
+1781 with rssi -61 from 26241
+Send seq# 471  @    39138 ticks   305.765
+Received neighbour discovery packet 1794 with rssi -81 from 26241ţʊ͛ Sleep for 12 slots
+Send seq# 473  @    39304 ticks   307.062
+Send seq# 474  @    39317 ticks   307.164
+ Sleep for 12 slots
+Send seq# 475  @    39471 ticks   308.367
+Send seq# 476  @    39483 ticks   308.460
+ Sleep for 12 slots
+Send seq# 477  @    39637 ticks   309.664
+Send seq# 478  @    39650 ticks   309.765
+ Sleep for 12 slots
+Send seq# 479  @    39804 ticks   310.968
+Received neighbour discovery packet 1830 with rssi -65 from 26241��͛f Sleep for 12 slots
+Send seq# 481  @    39970 ticks   312.265
+Send seq# 482  @    39983 ticks   312.367
+ Sleep for 12 slots
+Send seq# 483  @    40136 ticks   313.562
+Received neighbour discovery packet 1845 with rssi -66 from 26241ţ¢ʢ͛f Sleep for 12 slots
+Send seq# 485  @    40303 ticks   314.867
+Received neighbour discovery packet 1857 with rssi -62 from 26241ţ²͛ Sleep for 12 slots
+Send seq# 487  @    40469 ticks   316.164
+Received neighbour discovery packet Send seq# 488  @    40482 ticks   316.265
+ Sleep for 12 slots
+1864 with rssi -63 from 26241
+Send seq# 489  @    40635 ticks   317.460
+Send seq# 490  @    40648 ticks   317.562
+ Sleep for 12 slots
+Send seq# 491  @    40802 ticks   318.765
+Received neighbour discovery packet 1884 with rssi -64 from 26241!V�͍ٕ���ѡ�ͥk2ɽ'ţʒ͛ Sleep for 12 slots
+Send seq# 493  @    40968 ticks   320.062
+Send seq# 494  @    40981 ticks   320.164
+ Sleep for 12 slots
+Send seq# 495  @    41135 ticks   321.367
+Send seq# 496  @    41147 ticks   321.460
+ Sleep for 12 slots
+Send seq# 497  @    41301 ticks   322.664
+Received neighbour discovery packet 1909 with rssi -61 from 26241ţ�͛v Sleep for 12 slots
+Send seq# 499  @    41467 ticks   323.960
+Send seq# 500  @    41480 ticks   324.062
+ Sleep for 12 slots
+Send seq# 501  @    41634 ticks   325.265
+Send seq# 502  @    41646 ticks   325.359
+ Sleep for 12 slots
+Send seq# 503  @    41800 ticks   326.562
+Send seq# 504  @    41813 ticks   326.664
+ Sleep for 12 slots
+Send seq# 505  @    41967 ticks   327.867
+Send seq# 506  @    41979 ticks   327.960
+ Sleep for 12 slots
+Send seq# 507  @    42133 ticks   329.164
+Send seq# 508  @    42146 ticks   329.265
+ Sleep for 12 slots
+Send seq# 509  @    42299 ticks   330.460
+Send seq# 510  @    42312 ticks   330.562
+ Sleep for 12 slots
+Send seq# 511  @    42466 ticks   331.765
+Received neighbour discovery packet 1963 with rssi -59 from 26241ū¢͛� Sleep for 12 slots
+Send seq# 513  @    42632 ticks   333.062
+Send seq# 514  @    42645 ticks   333.164
+ Sleep for 12 slots
+Send seq# 515  @    42798 ticks   334.359
+Send seq# 516  @    42811 ticks   334.460
+ Sleep for 12 slots
+Send seq# 517  @    42965 ticks   335.664
+Send seq# 518  @    42978 ticks   335.765
+ Sleep for 12 slots
+Send seq# 519  @    43131 ticks   336.960
+Received neighbour discovery packet 1992 with rssi -72 from 26241ū͛ Sleep for 12 slots
+Send seq# 521  @    43298 ticks   338.265
+Send seq# 522  @    43310 ticks   338.359
+ Sleep for 12 slots
+Send seq# 523  @    43464 ticks   339.562
+Received neighbour discovery packet 2008 with rssi -61 from 26241ū͛� Sleep for 12 slots
+Send seq# 525  @    43630 ticks   340.859
+Received neighbour discovery packet 2016 with rssi -61 from 26241ū͛ Sleep for 12 slots
+Send seq# 527  @    43797 ticks   342.164
+Send seq# 528  @    43809 ticks   342.257
+ Sleep for 12 slots
+Send seq# 529  @    43963 ticks   343.460
+Received neighbour discovery packet 2025 with rssi -62 from 26241ūʺ͛V Sleep for 12 slots
+Send seq# 531  @    44130 ticks   344.765
+Send seq# 532  @    44142 ticks   344.859
+ Sleep for 12 slots
+Send seq# 533  @    44296 ticks   346.062
+Received neighbour discovery packet 2043 with rssi -63 from 26241ūʢ͛ Sleep for 12 slots
+Send seq# 535  @    44462 ticks   347.359
+Received neighbour discovery packet 2052 with rssi -62 from 26241ū͛F Sleep for 12 slots
+Send seq# 537  @    44629 ticks   348.664
+Send seq# 538  @    44641 ticks   348.757
+ Sleep for 12 slots
+Send seq# 539  @    44795 ticks   349.960
+Received neighbour discovery packet 2067 with rssi -64 from 26241͕ū¢͛ Sleep for 12 slots
+Send seq# 541  @    44961 ticks   351.257
+Received neighbour discovery packet 2073 with rssi -68 from 26241ūʺ͛6� Sleep for 12 slots
+Send seq# 543  @    45128 ticks   352.562
+Send seq# 544  @    45141 ticks   352.664
+ Sleep for 12 slots
+Send seq# 545  @    45294 ticks   353.859
+Received neighbour discovery packet 2089 with rssi -66 from 26241ū͛ Sleep for 12 slots
+Send seq# 547  @    45461 ticks   355.164
+Received neighbour discovery packet 2098 with rssi -67 from 26241ū�͛& Sleep for 12 slots
+Send seq# 549  @    45627 ticks   356.460
+Send seq# 550  @    45640 ticks   356.562
+ Sleep for 12 slots
+Send seq# 551  @    45793 ticks   357.757
+Received neighbour discovery packet 2118 with rssi -66 from 26241!V�͍ٕ��ʺѡ�ͥkf2ɽ'ū͛� Sleep for 12 slots
+Send seq# 553  @    45960 ticks   359.062
+Send seq# 554  @    45972 ticks   359.156
+ Sleep for 12 slots
+Send seq# 555  @    46126 ticks   360.359
+Received neighbour discovery packet 2135 with rssi -59 from 26241ūʢ͛F Sleep for 12 slots
+Send seq# 557  @    46293 ticks   361.664
+Received neighbour discovery packet Send seq# 558  @    46305 ticks   361.757
+ Sleep for 12 slots
+2145 with rssi -55 from 26241Send seq# 559  @    46459 ticks   362.960
+Send seq# 560  @    46472 ticks   363.062
+ Sleep for 12 slots
+Send seq# 561  @    46625 ticks   364.257
+Received neighbour discovery packet 2159 with rssi -56 from 26241ū¢͛6� Sleep for 12 slots
+Send seq# 563  @    46792 ticks   365.562
+Send seq# 564  @    46804 ticks   365.656
+ Sleep for 12 slots
+Send seq# 565  @    46958 ticks   366.859
+Received neighbour discovery packet 2176 with rssi -54 from 26241ūʺ͛ Sleep for 12 slots
+Send seq# 567  @    47124 ticks   368.156
+Send seq# 568  @    47137 ticks   368.257
+ Sleep for 12 slots
+Send seq# 569  @    47291 ticks   369.460
+Received neighbour discovery packet 2189 with rssi -56 from 26241ū͛� Sleep for 12 slots
+Send seq# 571  @    47457 ticks   370.757
+Send seq# 572  @    47470 ticks   370.859
+ Sleep for 12 slots
+Send seq# 573  @    47624 ticks   372.062
+Send seq# 574  @    47636 ticks   372.156
+ Sleep for 12 slots
+Send seq# 575  @    47790 ticks   373.359
+Send seq# 576  @    47803 ticks   373.460
+ Sleep for 12 slots
+Send seq# 577  @    47956 ticks   374.656
+Send seq# 578  @    47969 ticks   374.757
+ Sleep for 12 slots
+Send seq# 579  @    48123 ticks   375.960
+Send seq# 580  @    48135 ticks   376.054
+ Sleep for 12 slots
+Send seq# 581  @    48289 ticks   377.257
+Received neighbour discovery packet 2229 with rssi -74 from 26241ū͛6� Sleep for 12 slots
+Send seq# 583  @    48456 ticks   378.562
+Send seq# 584  @    48468 ticks   378.656
+ Sleep for 12 slots
+Send seq# 585  @    48622 ticks   379.859
+Send seq# 586  @    48635 ticks   379.960
+ Sleep for 12 slots
+Send seq# 587  @    48788 ticks   381.156
+Received neighbour discovery packet 2253 with rssi -68 from 26241ū��͛& Sleep for 12 slots
+Send seq# 589  @    48955 ticks   382.460
+Received neighbour discovery packet 2262 with rssi -73 from 26241!V�͍ٕ��͕ūʂ�͛V Sleep for 12 slots
+2263 with rssi -74 from 26241
+Send seq# 591  @    49121 ticks   383.757
+Send seq# 592  @    49134 ticks   383.859
+ Sleep for 12 slots
+Send seq# 593  @    49287 ticks   385.054
+Received neighbour discovery packet 2276 with rssi -75 from 26241ūʢʚ͛ª Sleep for 12 slots
+Send seq# 595  @    49454 ticks   386.359
+Received neighbour discovery packet 2284 with rssi -72 from 26241ūʲʢ͛²F Sleep for 12 slots
+Send seq# 597  @    49620 ticks   387.656
+Send seq# 598  @    49633 ticks   387.757
+ Sleep for 12 slots
+Send seq# 599  @    49787 ticks   388.960
+Send seq# 600  @    49799 ticks   389.054
+ Sleep for 12 slots
+Send seq# 601  @    49953 ticks   390.257
+Received neighbour discovery packet Send seq# 602  @    49966 ticks   390.359
+ Sleep for 12 slots
+2306 with rssi -64 from 26241Send seq# 603  @    50119 ticks   391.554
+Received neighbour discovery packet 2313 with rssi -67 from 26241ų͛ʊf Sleep for 12 slots
+Send seq# 605  @    50286 ticks   392.859
+Received neighbour discovery packet 2320 with rssi -67 from 26241ų�͛ʒ Sleep for 12 slots
+Send seq# 607  @    50452 ticks   394.156
+Send seq# 608  @    50465 ticks   394.257
+ Sleep for 12 slots
+Send seq# 609  @    50619 ticks   395.460
+Send seq# 610  @    50631 ticks   395.554
+ Sleep for 12 slots
+Send seq# 611  @    50785 ticks   396.757
+Send seq# 612  @    50798 ticks   396.859
+ Sleep for 12 slots
+Send seq# 613  @    50951 ticks   398.054
+Send seq# 614  @    50964 ticks   398.156
+ Sleep for 12 slots
+Send seq# 615  @    51118 ticks   399.359
+Send seq# 616  @    51130 ticks   399.453
+ Sleep for 12 slots
+Send seq# 617  @    51284 ticks   400.656
+Send seq# 618  @    51297 ticks   400.757
+ Sleep for 12 slots
+Send seq# 619  @    51450 ticks   401.953
+Received neighbour discovery packet 2379 with rssi -72 from 26241Send seq# 620  @    51463 ticks   402.054
+ Sleep for 12 slots
+Send seq# 621  @    51617 ticks   403.257
+Received neighbour discovery packet 2389 with rssi -71 from 26241ųͣ6� Sleep for 12 slots
+Send seq# 623  @    51783 ticks   404.554
+Send seq# 624  @    51796 ticks   404.656
+ Sleep for 12 slots
+Send seq# 625  @    51950 ticks   405.859
+Send seq# 626  @    51962 ticks   405.953
+ Sleep for 12 slots
+Send seq# 627  @    52116 ticks   407.156
+Send seq# 628  @    52129 ticks   407.257
+ Sleep for 12 slots
+Send seq# 629  @    52282 ticks   408.453
+Send seq# 630  @    52295 ticks   408.554
+ Sleep for 12 slots
+Send seq# 631  @    52449 ticks   409.757
+Send seq# 632  @    52461 ticks   409.851
+ Sleep for 12 slots
+Send seq# 633  @    52615 ticks   411.054
+Send seq# 634  @    52628 ticks   411.156
+ Sleep for 12 slots
+Send seq# 635  @    52782 ticks   412.359
+Received neighbour discovery packet 2442 with rssi -62 from 26241ųʢͣF Sleep for 12 slots
+Send seq# 637  @    52948 ticks   413.656
+Send seq# 638  @    52961 ticks   413.757
+ Sleep for 12 slots
+Send seq# 639  @    53114 ticks   414.953
+Send seq# 640  @    53127 ticks   415.054
+ Sleep for 12 slots
+Send seq# 641  @    53281 ticks   416.257
+Send seq# 642  @    53293 ticks   416.351
+ Sleep for 12 slots
+Send seq# 643  @    53447 ticks   417.554
+Send seq# 644  @    53460 ticks   417.656
+ Sleep for 12 slots
+Send seq# 645  @    53613 ticks   418.851
+Send seq# 646  @    53626 ticks   418.953
+ Sleep for 12 slots
+Send seq# 647  @    53780 ticks   420.156
+Received neighbour discovery packet Send seq# 648  @    53793 ticks   420.257
+ Sleep for 12 slots
+2492 with rssi -56 from 26241
+Send seq# 649  @    53946 ticks   421.453
+Received neighbour discovery packet 2501 with rssi -56 from 26241�ʪʢͣV Sleep for 12 slots
+Send seq# 651  @    54113 ticks   422.757
+Received neighbour discovery packet 2509 with rssi -52 from 26241ųͣ Sleep for 12 slots
+Send seq# 653  @    54279 ticks   424.054
+Send seq# 654  @    54292 ticks   424.156
+ Sleep for 12 slots
+Send seq# 655  @    54445 ticks   425.351
+Send seq# 656  @    54458 ticks   425.453
+ Sleep for 12 slots
+Send seq# 657  @    54612 ticks   426.656
+Received neighbour discovery packet 2530 with rssi -52 from 26241ų�bͣv Sleep for 12 slots
+Send seq# 659  @    54778 ticks   427.953
+Send seq# 660  @    54791 ticks   428.054
+ Sleep for 12 slots
+Send seq# 661  @    54945 ticks   429.257
+Send seq# 662  @    54957 ticks   429.351
+ Sleep for 12 slots
+Send seq# 663  @    55111 ticks   430.554
+Received neighbour discovery packet 2545 with rssi -57 from 26241ųͣf Sleep for 12 slots
+Send seq# 665  @    55277 ticks   431.851
+Send seq# 666  @    55290 ticks   431.953
+ Sleep for 12 slots
+Send seq# 667  @    55444 ticks   433.156
+Received neighbour discovery packet 2559 with rssi -53 from 26241ų�ͣ& Sleep for 12 slots
+Send seq# 669  @    55610 ticks   434.453
+Send seq# 670  @    55623 ticks   434.554
+ Sleep for 12 slots
+Send seq# 671  @    55776 ticks   435.750
+Received neighbour discovery packet 2574 with rssi -55 from 26241ų�� Sleep for 12 slots
+Send seq# 673  @    55943 ticks   437.054
+Received neighbour discovery packet 2580 with rssi -58 from 26241ųʪͣ Sleep for 12 slots
+Send seq# 675  @    56109 ticks   438.351
+Send seq# 676  @    56122 ticks   438.453
+ Sleep for 12 slots
+Send seq# 677  @    56276 ticks   439.656
+Received neighbour discovery packet 2596 with rssi -59 from 26241ų��ͣ� Sleep for 12 slots
+Send seq# 679  @    56442 ticks   440.953
+Received neighbour discovery packet 2602 with rssi -56 from 26241ųͣV Sleep for 12 slots
+Send seq# 681  @    56608 ticks   442.250
+Received neighbour discovery packet 2608 with rssi -58 from 26241ųͣ6 Sleep for 12 slots
+Send seq# 683  @    56775 ticks   443.554
+Received neighbour discovery packet 2615 with rssi -55 from 26241ų¢ºͣf� Sleep for 12 slots
+Send seq# 685  @    56941 ticks   444.851
+Send seq# 686  @    56954 ticks   444.953
+ Sleep for 12 slots
+Send seq# 687  @    57108 ticks   446.156
+Send seq# 688  @    57120 ticks   446.250
+ Sleep for 12 slots
+Send seq# 689  @    57274 ticks   447.453
+Received neighbour discovery packet 2633 with rssi -63 from 26241ųʂºͣV Sleep for 12 slots
+Send seq# 691  @    57440 ticks   448.750
+Received neighbour discovery packet 2639 with rssi -60 from 26241ųʒͣ Sleep for 12 slots
+Send seq# 693  @    57607 ticks   450.054
+Send seq# 694  @    57619 ticks   450.148
+ Sleep for 12 slots
+Send seq# 695  @    57773 ticks   451.351
+Received neighbour discovery packet 2655 with rssi -65 from 26241ųʲ²ͣF Sleep for 12 slots
+Send seq# 697  @    57939 ticks   452.648
+Send seq# 698  @    57952 ticks   452.750
+ Sleep for 12 slots
+Send seq# 699  @    58106 ticks   453.953
+Received neighbour discovery packet 2669 with rssi -61 from 26241Żʢͣ Sleep for 12 slots
+Send seq# 701  @    58272 ticks   455.250
+Send seq# 702  @    58285 ticks   455.351
+ Sleep for 12 slots
+Send seq# 703  @    58439 ticks   456.554
+Send seq# 704  @    58451 ticks   456.648
+ Sleep for 12 slots
+Send seq# 705  @    58605 ticks   457.851
+Send seq# 706  @    58618 ticks   457.953
+ Sleep for 12 slots
+Send seq# 707  @    58771 ticks   459.148
+Send seq# 708  @    58784 ticks   459.250
+ Sleep for 12 slots
+Send seq# 709  @    58938 ticks   460.453
+Received neighbour discovery packet 2704 with rssi -59 from 26241Ż�ͣV Sleep for 12 slots
+Send seq# 711  @    59104 ticks   461.750
+Send seq# 712  @    59117 ticks   461.851
+ Sleep for 12 slots
+Send seq# 713  @    59271 ticks   463.054
+Send seq# 714  @    59283 ticks   463.148
+ Sleep for 12 slots
+Send seq# 715  @    59437 ticks   464.351
+Send seq# 716  @    59450 ticks   464.453
+ Sleep for 12 slots
+Send seq# 717  @    59603 ticks   465.648
+Received neighbour discovery packet 2732 with rssi -58 from 26241Ż�ʲͣv Sleep for 12 slots
+Send seq# 719  @    59770 ticks   466.953
+Send seq# 720  @    59782 ticks   467.046
+ Sleep for 12 slots
+Send seq# 721  @    59936 ticks   468.250
+Received neighbour discovery packet Send seq# 722  @    59949 ticks   468.351
+ Sleep for 12 slots
+2749 with rssi -56 from 26241
+Send seq# 723  @    60102 ticks   469.546
+Send seq# 724  @    60115 ticks   469.648
+ Sleep for 12 slots
+Send seq# 725  @    60269 ticks   470.851
+Received neighbour discovery packet 2765 with rssi -59 from 26241Ż� Sleep for 12 slots
+Send seq# 727  @    60435 ticks   472.148
+Received neighbour discovery packet 2771 with rssi -58 from 26241
+Send seq# 728  @    60448 ticks   472.250
+ Sleep for 12 slots
+Send seq# 729  @    60602 ticks   473.453
+Send seq# 730  @    60614 ticks   473.546
+ Sleep for 12 slots
+Send seq# 731  @    60768 ticks   474.750
+Received neighbour discovery packet 2787 with rssi -56 from 26241Ż� Sleep for 12 slots
+Send seq# 733  @    60934 ticks   476.046
+Received neighbour discovery packet 2794 with rssi -57 from 26241Żʢͣ� Sleep for 12 slots
+Send seq# 735  @    61101 ticks   477.351
+Send seq# 736  @    61113 ticks   477.445
+ Sleep for 12 slots
+Send seq# 737  @    61267 ticks   478.648
+Received neighbour discovery packet 2810 with rssi -54 from 26241Ż�ͣ� Sleep for 12 slots
+Send seq# 739  @    61434 ticks   479.953
+Send seq# 740  @    61446 ticks   480.046
+ Sleep for 12 slots
+Send seq# 741  @    61600 ticks   481.250
+Send seq# 742  @    61613 ticks   481.351
+ Sleep for 12 slots
+Send seq# 743  @    61766 ticks   482.546
+Received neighbour discovery packet 2832 with rssi -53 from 26241Żʢͣf� Sleep for 12 slots
+Send seq# 745  @    61933 ticks   483.851
+Received neighbour discovery packet 2842 with rssi -53 from 26241!V�͍ٕ��͕Żʢͣ Sleep for 12 slots
+2843 with rssi -54 from 26241Send seq# 747  @    62099 ticks   485.148
+Received neighbour discovery packet 2852 with rssi -53 from 26241Ż�ͣª& Sleep for 12 slots
+Send seq# 749  @    62265 ticks   486.445
+Send seq# 750  @    62278 ticks   486.546
+ Sleep for 12 slots
+Send seq# 751  @    62432 ticks   487.750
+Received neighbour discovery packet 2865 with rssi -53 from 26241Żͣº Sleep for 12 slots
+Send seq# 753  @    62598 ticks   489.046
+Send seq# 754  @    62611 ticks   489.148
+ Sleep for 12 slots
+Send seq# 755  @    62765 ticks   490.351
+Received neighbour discovery packet 2880 with rssi -55 from 26241ŻͣʂF Sleep for 12 slots
+Send seq# 757  @    62931 ticks   491.648
+Send seq# 758  @    62944 ticks   491.750
+ Sleep for 12 slots
+Send seq# 759  @    63097 ticks   492.945
+Send seq# 760  @    63110 ticks   493.046
+ Sleep for 12 slots
+Send seq# 761  @    63264 ticks   494.250
+Send seq# 762  @    63276 ticks   494.343
+ Sleep for 12 slots
+Send seq# 763  @    63430 ticks   495.546
+Received neighbour discovery packet 2911 with rssi -56 from 26241Żͣʪf� Sleep for 12 slots
+Send seq# 765  @    63597 ticks   496.851
+Received neighbour discovery packet 2920 with rssi -52 from 26241�ʢͣʲ Sleep for 12 slots
+Send seq# 767  @    63763 ticks   498.148
+Send seq# 768  @    63776 ticks   498.250
+ Sleep for 12 slots
+Send seq# 769  @    63929 ticks   499.445
+Received neighbour discovery packet 2932 with rssi -53 from 26241Żʢͣ�V Sleep for 12 slots
+Send seq# 771  @    64096 ticks   500.750
+Received neighbour discovery packet 2940 with rssi -54 from 26241Ż¢ͫ Sleep for 12 slots
+Send seq# 773  @    64262 ticks   502.046
+Send seq# 774  @    64275 ticks   502.148
+ Sleep for 12 slots
+Send seq# 775  @    64428 ticks   503.343
+Received neighbour discovery packet 2955 with rssi -50 from 26241Received neighbour discovery packet 2956 with rssi -50 from 26241ŻfͫF Sleep for 12 slots
+Send seq# 777  @    64595 ticks   504.648
+Send seq# 778  @    64608 ticks   504.750
+ Sleep for 12 slots
+Send seq# 779  @    64761 ticks   505.945
+Received neighbour discovery packet 2967 with rssi -49 from 26241Ż򢺺ͫ Sleep for 12 slots
+Send seq# 781  @    64928 ticks   507.250
+Received neighbour discovery packet 2977 with rssi -50 from 26241�end seq# 782  @    64940 ticks   507.343
+ Sleep for 12 slots
+Send seq# 783  @    65094 ticks   508.546
+Received neighbour discovery packet 2983 with rssi -50 from 26241Ż¢ͫ�� Sleep for 12 slots
+Send seq# 785  @    65260 ticks   509.843
+Received neighbour discovery packet 2989 with rssi -50 from 26241Ż²ͫʖ Sleep for 12 slots
+Send seq# 787  @    65427 ticks   511.148
+Received neighbour discovery packet 2999 with rssi -50 from 26241Ż�ʢͫ& Sleep for 12 slots
+Send seq# 789  @    65593 ticks   512.445
+Send seq# 790  @    65606 ticks   512.546
+ Sleep for 12 slots
+Send seq# 791  @    65760 ticks   513.750
+Send seq# 792  @    65772 ticks   513.843
+ Sleep for 12 slots
+Send seq# 793  @    65926 ticks   515.046
+Received neighbour discovery packet 3019 with rssi -50 from 26241Żʢʚʢͫ� Sleep for 12 slots
+Send seq# 795  @    66092 ticks   516.343
+Received neighbour discovery packet 3025 with rssi -51 from 26241ŻʲͫF Sleep for 12 slots
+Send seq# 797  @    66259 ticks   517.648
+Send seq# 798  @    66271 ticks   517.742
+ Sleep for 12 slots
+Send seq# 799  @    66425 ticks   518.945
+Send seq# 800  @    66438 ticks   519.046
+ Sleep for 12 slots
+Send seq# 801  @    66591 ticks   520.242
+Send seq# 802  @    66604 ticks   520.343
+ Sleep for 12 slots
+Send seq# 803  @    66758 ticks   521.546
+Received neighbour discovery packet 3049 with rssi -50 from 26241�ͫf� Sleep for 12 slots
+Send seq# 805  @    66924 ticks   522.843
+Send seq# 806  @    66937 ticks   522.945
+ Sleep for 12 slots
+Send seq# 807  @    67091 ticks   524.148
+Received neighbour discovery packet Send seq# 808  @    67103 ticks   524.242
+ Sleep for 12 slots
+3066 with rssi -52 from 26241
+Send seq# 809  @    67257 ticks   525.445
+Received neighbour discovery packet 3073 with rssi -50 from 26241�ͫV Sleep for 12 slots
+Send seq# 811  @    67423 ticks   526.742
+Send seq# 812  @    67436 ticks   526.843
+ Sleep for 12 slots
+Send seq# 813  @    67590 ticks   528.046
+Send seq# 814  @    67602 ticks   528.140
+ Sleep for 12 slots
+Send seq# 815  @    67756 ticks   529.343
+Send seq# 816  @    67769 ticks   529.445
+ Sleep for 12 slots
+Send seq# 817  @    67923 ticks   530.648
+Received neighbour discovery packet Send seq# 818  @    67935 ticks   530.742
+ Sleep for 12 slots
+3101 with rssi -54 from 26241
+Send seq# 819  @    68089 ticks   531.945
+Received neighbour discovery packet 3109 with rssi -53 from 26241�ͫF Sleep for 12 slots
+Send seq# 821  @    68255 ticks   533.242
+Received neighbour discovery packet 3115 with rssi -53 from 26241�¢ͫ6 Sleep for 12 slots
+Send seq# 823  @    68422 ticks   534.546
+Send seq# 824  @    68434 ticks   534.640
+ Sleep for 12 slots
+Send seq# 825  @    68588 ticks   535.843
+Received neighbour discovery packet 3132 with rssi -53 from 26241
+Received neighbour discovery packet 3133 with rssi -53 from 26241�²ͫ Sleep for 12 slots
+Send seq# 827  @    68754 ticks   537.140
+Send seq# 828  @    68767 ticks   537.242
+ Sleep for 12 slots
+Send seq# 829  @    68921 ticks   538.445
+Received neighbour discovery packet 3145 with rssi -53 from 26241��ͫ� Sleep for 12 slots
+Send seq# 831  @    69087 ticks   539.742
+Received neighbour discovery packet 3151 with rssi -53 from 26241�ʊͫʆ Sleep for 12 slots
+Send seq# 833  @    69254 ticks   541.046
+Send seq# 834  @    69266 ticks   541.140
+ Sleep for 12 slots
+Send seq# 835  @    69420 ticks   542.343
+Received neighbour discovery packet 3164 with rssi -55 from 26241�ʢͫF Sleep for 12 slots
+Send seq# 837  @    69586 ticks   543.640
+Send seq# 838  @    69599 ticks   543.742
+ Sleep for 12 slots
+Send seq# 839  @    69753 ticks   544.945
+Received neighbour discovery packet Send seq# 840  @    69765 ticks   545.039
+ Sleep for 12 slots
+3179 with rssi -53 from 26241
+Send seq# 841  @    69919 ticks   546.242
+Received neighbour discovery packet 3185 with rssi -54 from 26241�"�ͫ6 Sleep for 12 slots
+Send seq# 843  @    70086 ticks   547.546
+Send seq# 844  @    70098 ticks   547.640
+ Sleep for 12 slots
+Send seq# 845  @    70252 ticks   548.843
+Send seq# 846  @    70265 ticks   548.945
+ Sleep for 12 slots
+Send seq# 847  @    70418 ticks   550.140
+Received neighbour discovery packet 3209 with rssi -55 from 26241Ň�ͫ& Sleep for 12 slots
+Send seq# 849  @    70585 ticks   551.445
+Received neighbour discovery packet 3221 with rssi -54 from 26241�ʺͫV� Sleep for 12 slots
+Send seq# 851  @    70751 ticks   552.742
+Send seq# 852  @    70764 ticks   552.843
+ Sleep for 12 slots
+Send seq# 853  @    70917 ticks   554.039
+Received neighbour discovery packet 3240 with rssi -54 from 26241�ʚͫ Sleep for 12 slots
+Send seq# 855  @    71084 ticks   555.343
+Received neighbour discovery packet Send seq# 856  @    71097 ticks   555.445
+ Sleep for 12 slots
+3245 with rssi -55 from 26241
+Send seq# 857  @    71250 ticks   556.640
+Send seq# 858  @    71263 ticks   556.742
+ Sleep for 12 slots
+Send seq# 859  @    71417 ticks   557.945
+Received neighbour discovery packet 3264 with rssi -54 from 26241�ʢͫ�� Sleep for 12 slots
+Send seq# 861  @    71583 ticks   559.242
+Send seq# 862  @    71596 ticks   559.343
+ Sleep for 12 slots
+Send seq# 863  @    71749 ticks   560.539
+Received neighbour discovery packet 3276 with rssi -55 from 26241�ͫf Sleep for 12 slots
+Send seq# 865  @    71916 ticks   561.843
+Received neighbour discovery packet 3281 with rssi -59 from 26241�vʒ¢ͫ Sleep for 12 slots
+Send seq# 867  @    72082 ticks   563.140
+Received neighbour discovery packet 3287 with rssi -57 from 26241
+Send seq# 868  @    72095 ticks   563.242
+ Sleep for 12 slots
+Send seq# 869  @    72249 ticks   564.445
+Send seq# 870  @    72261 ticks   564.539
+ Sleep for 12 slots
+Send seq# 871  @    72415 ticks   565.742
+Received neighbour discovery packet 3302 with rssi -58 from 26241�¢ͫ Sleep for 12 slots
+Send seq# 873  @    72581 ticks   567.039
+Send seq# 874  @    72594 ticks   567.140
+ Sleep for 12 slots
+Send seq# 875  @    72748 ticks   568.343
+Send seq# 876  @    72760 ticks   568.437
+ Sleep for 12 slots
+Send seq# 877  @    72914 ticks   569.640
+Received neighbour discovery packet 3321 with rssi -59 from 26241��ʒͫ� Sleep for 12 slots
+Send seq# 879  @    73080 ticks   570.937
+Received neighbour discovery packet 3329 with rssi -59 from 26241�ʚͫ� Sleep for 12 slots
+Send seq# 881  @    73247 ticks   572.242
+Send seq# 882  @    73260 ticks   572.343
+ Sleep for 12 slots
+Send seq# 883  @    73413 ticks   573.539
+Received neighbour discovery packet 3349 with rssi -57 from 26241�¢ͫf Sleep for 12 slots
+Send seq# 885  @    73580 ticks   574.843
+Received neighbour discovery packet 3360 with rssi -59 from 26241�²ʒͫ Sleep for 12 slots
+Send seq# 887  @    73746 ticks   576.140
+Received neighbour discovery packet 3369 with rssi -57 from 26241��ʢͫ& Sleep for 12 slots
+Send seq# 889  @    73912 ticks   577.437
+Received neighbour discovery packet 3378 with rssi -58 from 26241�ʂʒ�V� Sleep for 12 slots
+Send seq# 891  @    74079 ticks   578.742
+Received neighbour discovery packet 3386 with rssi -57 from 26241�ʒʊͫ Sleep for 12 slots
+Send seq# 893  @    74245 ticks   580.039
+Send seq# 894  @    74258 ticks   580.140
+ Sleep for 12 slots
+Send seq# 895  @    74412 ticks   581.343
+Received neighbour discovery packet 3403 with rssi -57 from 26241�ʲͫF Sleep for 12 slots
+Send seq# 897  @    74578 ticks   582.640
+Send seq# 898  @    74591 ticks   582.742
+ Sleep for 12 slots
+Send seq# 899  @    74744 ticks   583.937
+Send seq# 900  @    74757 ticks   584.039
+ Sleep for 12 slots
+Send seq# 901  @    74911 ticks   585.242
+Received neighbour discovery packet 3428 with rssi -59 from 26241!V�͍ٕ��͕�ʒͫª6 Sleep for 12 slots
+3429 with rssi -58 from 26241
+Send seq# 903  @    75077 ticks   586.539
+Send seq# 904  @    75090 ticks   586.640
+ Sleep for 12 slots
+Send seq# 905  @    75243 ticks   587.835
+Received neighbour discovery packet 3440 with rssi -56 from 26241�ͫº Sleep for 12 slots
+Send seq# 907  @    75410 ticks   589.140
+Received neighbour discovery packet 3445 with rssi -56 from 26241��ͫ�& Sleep for 12 slots
+Send seq# 909  @    75576 ticks   590.437
+Received neighbour discovery packet 3454 with rssi -56 from 26241��ͫʂV� Sleep for 12 slots
+Send seq# 911  @    75743 ticks   591.742
+Received neighbour discovery packet 3460 with rssi -56 from 26241�ͫʊ Sleep for 12 slots
+Send seq# 913  @    75909 ticks   593.039
+Send seq# 914  @    75922 ticks   593.140
+ Sleep for 12 slots
+Send seq# 915  @    76075 ticks   594.335
+Send seq# 916  @    76088 ticks   594.437
+ Sleep for 12 slots
+Send seq# 917  @    76242 ticks   595.640
+Received neighbour discovery packet 3484 with rssi -56 from 26241��ͫʪv Sleep for 12 slots
+Send seq# 919  @    76408 ticks   596.937
+Send seq# 920  @    76421 ticks   597.039
+ Sleep for 12 slots
+Send seq# 921  @    76575 ticks   598.242
+Send seq# 922  @    76587 ticks   598.335
+ Sleep for 12 slots
