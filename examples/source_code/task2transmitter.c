@@ -12,26 +12,23 @@
 #include <math.h>
 #include "node-id.h"
 
-
+// From nbr.c
 #define WAKE_TIME RTIMER_SECOND/10
 #define SLEEP_CYCLE 9
 #define SLEEP_SLOT RTIMER_SECOND/10
 #define NUM_SEND 2
 
-#define RSSI_TO_DISTANCE_CONVERSION 55
-#define PATH_LOSS 2.7
-#define ATTENUATION 1
-#define TX 5
-#define PROXIMITY_DISTANCE_THRESHOLD 3.0
+#define LINK_THRESHOLD -66
+#define READING_LENGTH 10
+#define LIGHT_DEFAULT -1
+
 #define PROXIMITY_CONTACT_TIME (RTIMER_SECOND * 15)
-#define PROXIMITY_ABSENT_TIME (RTIMER_SECOND * 30)
 #define SENDER_TYPE 0
-#define RECEIVER_TYPE 1
 #define DETECT_INTERVAL 15
-#define ABSENT_INTERVAL 30
 
 linkaddr_t dest_addr;
 
+// From nbr.c
 typedef struct {
   unsigned long src_id;
   unsigned long timestamp;
@@ -43,7 +40,7 @@ typedef struct {
   unsigned long src_id;
   unsigned long timestamp;
   unsigned long seq;
-  int light_readings[10];
+  int light_readings[READING_LENGTH];
 } data_light_packet_struct;
 
 static struct etimer interval_timer;
@@ -53,14 +50,11 @@ static struct pt pt;
 static data_packet_struct data_packet;
 static data_light_packet_struct data_light_packet;
 unsigned long curr_timestamp;
-static rtimer_clock_t first_contact_time, last_contact_time;
-static bool in_proximity = false;
+static bool has_detected = false;
+static bool has_good_link = false;
 
-static int light_readings[10] = {0};
+static int light_readings[READING_LENGTH] = {0};
 static int num_light_readings = 0;
-// Define variables to keep track of the last printed time
-static unsigned long last_detect_time = 0;
-static unsigned long last_absent_time = 0;
 
 
 PROCESS(nbr_discovery_process, "cc2650 neighbour discovery process");
@@ -71,20 +65,24 @@ AUTOSTART_PROCESSES(&nbr_discovery_process, &light_reading_process);
 static void init_opt_reading(void);
 static void get_light_reading(void);
 
+/**
+* LIGHT READING FROM ASSIGNMENT 2
+*/
 static void get_light_reading() {
   int value;
   value = opt_3001_sensor.value(0);
 
   if(value != CC26XX_SENSOR_READING_ERROR) {
-    //printf("OPT: Light=%d.%02d lux\n", value / 100, value % 100);
-    light_readings[num_light_readings % 10] = value;
-    //printf("Latest light reading: %d\n", value);
+    light_readings[num_light_readings % READING_LENGTH] = value;
     num_light_readings++;
   }
   init_opt_reading();
 }
 
 static void init_opt_reading(void) {
+  for (int i = 0; i < READING_LENGTH; i++) {
+    light_readings[i] = LIGHT_DEFAULT;
+  }
   SENSORS_ACTIVATE(opt_3001_sensor);
 }
 
@@ -103,55 +101,56 @@ PROCESS_THREAD(light_reading_process, ev, data) {
   PROCESS_END();
 }
 
+/**
+* END OF LIGHT READING FROM ASSIGNMENT 2
+*/
+
+
+// Modified from nbr.c
 void receive_packet_callback(const void *data, uint16_t len, const linkaddr_t *src, const linkaddr_t *dest) {
-  if (len == sizeof(data_packet)) {
-    static data_packet_struct received_packet_data;
-    memcpy(&received_packet_data, data, len);
-
-    if (received_packet_data.device_type != data_packet.device_type) {
-      int rssi = (signed short)packetbuf_attr(PACKETBUF_ATTR_RSSI);
-      unsigned long time_diff_rtimer = 0;
-      unsigned long time_diff_seconds = 0;
-      printf("RSSI: %d\n", rssi);
-
-      if (rssi >= -66) {
-        if (!in_proximity) {
-          in_proximity = true;
-          first_contact_time = RTIMER_NOW();
-        }
-        last_contact_time = RTIMER_NOW();
-        time_diff_rtimer = last_contact_time - first_contact_time;
-        time_diff_seconds = time_diff_rtimer / RTIMER_SECOND;
-        printf("Time difference since first contact: %ld\n", time_diff_seconds);
-        if (in_proximity && time_diff_rtimer >= PROXIMITY_CONTACT_TIME) {
-          unsigned long elapsed_time = (last_detect_time == 0) ? DETECT_INTERVAL : (last_contact_time - last_detect_time) / RTIMER_SECOND;
-          if (elapsed_time >= DETECT_INTERVAL) {
-            printf("%lu DETECT %lu\n", first_contact_time/RTIMER_SECOND, received_packet_data.src_id);
-          }
-          memcpy(&data_light_packet.light_readings, light_readings, sizeof(light_readings));
-          data_light_packet.timestamp = curr_timestamp;
-          data_light_packet.seq++;
-          nullnet_buf = (uint8_t *)&data_light_packet;
-          nullnet_len = sizeof(data_light_packet);
-          NETSTACK_NETWORK.output(&dest_addr);
-          last_detect_time = last_contact_time;
-        }
-
-      } else {
-        in_proximity = false;
-        first_contact_time = RTIMER_NOW();
-        if ((RTIMER_NOW() - last_contact_time) >= PROXIMITY_ABSENT_TIME) {
-          unsigned long elapsed_time = (RTIMER_NOW() - last_absent_time) / RTIMER_SECOND;
-          if (elapsed_time >= ABSENT_INTERVAL) {
-            printf("%lu ABSENT %lu\n", last_contact_time / RTIMER_SECOND, received_packet_data.src_id);
-            last_absent_time = RTIMER_NOW();
-          }
-        }
-      }
-    }
+  if (len != sizeof(data_packet)) {
+    return;
   }
-}
 
+  static data_packet_struct received_packet_data;
+  memcpy(&received_packet_data, data, len);
+
+  if (received_packet_data.device_type == data_packet.device_type) {
+    return;
+  }
+
+  if (!has_detected) {
+    printf("%lu DETECT %lu\n", RTIMER_NOW()/RTIMER_SECOND, received_packet_data.src_id);
+    has_detected = true;
+  }
+  int rssi = (signed short)packetbuf_attr(PACKETBUF_ATTR_RSSI);
+  printf("RSSI: %d\n", rssi);
+
+  // If link quality is weak
+  if (rssi < LINK_THRESHOLD) {
+    has_good_link = false;
+    return;
+  }
+
+  if (!has_good_link) {
+    has_good_link = true;
+  }
+
+  memcpy(&data_light_packet.light_readings, light_readings, sizeof(light_readings));
+  data_light_packet.timestamp = curr_timestamp;
+  data_light_packet.seq++;
+  nullnet_buf = (uint8_t *)&data_light_packet;
+  nullnet_len = sizeof(data_light_packet);
+  NETSTACK_NETWORK.output(&dest_addr);
+
+  // reset the light readings
+  for (int i = 0; i < READING_LENGTH; i++) {
+    light_readings[i] = LIGHT_DEFAULT;
+  }
+  
+  return;
+}
+// Assimilated from nbr.c
 // Scheduler function for the sender of neighbour discovery packets
 char sender_scheduler(struct rtimer *t, void *ptr) {
 
@@ -223,6 +222,7 @@ char sender_scheduler(struct rtimer *t, void *ptr) {
   PT_END(&pt);
 }
 
+// Modified from nbr.c
 PROCESS_THREAD(nbr_discovery_process, ev, data) {
   PROCESS_BEGIN();
   data_light_packet.src_id = node_id;
