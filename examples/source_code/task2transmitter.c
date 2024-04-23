@@ -54,7 +54,7 @@ static bool has_detected = false;
 static bool has_good_link = false;
 
 static int light_readings[READING_LENGTH] = {0};
-static int num_light_readings = 0;
+static int light_index = 0;
 
 
 PROCESS(nbr_discovery_process, "cc2650 neighbour discovery process");
@@ -73,24 +73,29 @@ static void get_light_reading() {
   value = opt_3001_sensor.value(0);
 
   if(value != CC26XX_SENSOR_READING_ERROR) {
-    light_readings[num_light_readings % READING_LENGTH] = value;
-    num_light_readings++;
+    if (light_index >= READING_LENGTH) {
+      // printf("skip updating light reading\n");
+      return;
+    }
+
+    // printf("light sense[%d]: %d\n", light_index, value);
+    light_readings[light_index % READING_LENGTH] = value;
+    light_index++;
   }
   init_opt_reading();
 }
 
 static void init_opt_reading(void) {
-  for (int i = 0; i < READING_LENGTH; i++) {
-    light_readings[i] = LIGHT_DEFAULT;
-  }
   SENSORS_ACTIVATE(opt_3001_sensor);
 }
 
 PROCESS_THREAD(light_reading_process, ev, data) {
   PROCESS_BEGIN();
 
-  printf("Collecting light for an interval of 3 seconds\n");
-  etimer_set(&interval_timer, CLOCK_SECOND * 3);
+  for (int i = 0; i < READING_LENGTH; i++) {
+    light_readings[i] = LIGHT_DEFAULT;
+  }
+  etimer_set(&interval_timer, CLOCK_SECOND);
 
   while (1) {
     get_light_reading();
@@ -143,11 +148,17 @@ void receive_packet_callback(const void *data, uint16_t len, const linkaddr_t *s
   nullnet_len = sizeof(data_light_packet);
   NETSTACK_NETWORK.output(&dest_addr);
 
+  printf("%ld TRANSFER %ld\n", RTIMER_NOW(), received_packet_data.src_id);
+  // for(int i = 0; i < READING_LENGTH; i++) {
+  //   printf("sending light reading %d\n", data_light_packet.light_readings[i]);
+  // }
+
   // reset the light readings
   for (int i = 0; i < READING_LENGTH; i++) {
     light_readings[i] = LIGHT_DEFAULT;
   }
-  
+  light_index = 0;
+
   return;
 }
 // Assimilated from nbr.c
@@ -205,10 +216,7 @@ char sender_scheduler(struct rtimer *t, void *ptr) {
       // radio off
       NETSTACK_RADIO.off();
 
-      // get a value that is uniformly distributed between 0 and 2*SLEEP_CYCLE
-      // the average is SLEEP_CYCLE
-      NumSleep = random_rand() % (2 * SLEEP_CYCLE + 1);
-      //printf(" Sleep for %d slots \n",NumSleep);
+      NumSleep = 13 - 1; // 7 - 1 on receiver
 
       // NumSleep should be a constant or static int
       for(i = 0; i < NumSleep; i++){
