@@ -68,12 +68,6 @@ static void get_light_reading() {
   value = opt_3001_sensor.value(0);
 
   if (value != CC26XX_SENSOR_READING_ERROR) {
-    // Skip updating light reading if the buffer is full
-    if (light_index >= LIGHT_READING_LEN) {
-      // printf("skip updating light reading\n");
-      return;
-    }
-
     // printf("light sense[%d]: %d\n", light_index, value);
     light_readings[light_index % LIGHT_READING_LEN] = value;
     light_index++;
@@ -93,6 +87,12 @@ PROCESS_THREAD(light_reading_process, ev, data) {
   etimer_set(&interval_timer, CLOCK_SECOND);
 
   while (1) {
+    // Skip updating light reading if the buffer is full, immediately read the
+    // light sensor after the buffer is flushed -- prevent unnecessary reading
+    if (light_index >= LIGHT_READING_LEN) {
+      // printf("skip updating light reading\n");
+      continue;
+    }
     get_light_reading();
     PROCESS_WAIT_EVENT_UNTIL(etimer_expired(&interval_timer));
     etimer_reset(&interval_timer);
@@ -126,7 +126,7 @@ void receive_packet_callback(const void *data, uint16_t len,
   printf("RSSI: %d\n", rssi);
 
   // If link quality is weak
-  if (rssi < LINK_THRESHOLD) {
+  if (rssi < RSSI_THRESHOLD) {
     has_good_link = false;
     return;
   }
@@ -160,7 +160,7 @@ void receive_packet_callback(const void *data, uint16_t len,
 
 char sender_scheduler(struct rtimer *t, void *ptr) {
   static uint16_t i = 0;
-  static int num_sleep = 0;
+  static int NumSleep = 0;
 
   // Begin the protothread
   PT_BEGIN(&pt);
@@ -205,10 +205,10 @@ char sender_scheduler(struct rtimer *t, void *ptr) {
       // radio off
       NETSTACK_RADIO.off();
 
-      num_sleep = 13 - 1; // Used for DISCO; 7 - 1 on receiver
+      NumSleep = 13 - 1; // Used for DISCO; 7 - 1 on receiver
 
       // NumSleep should be a constant or static int
-      for (i = 0; i < num_sleep; i++) {
+      for (i = 0; i < NumSleep; i++) {
         rtimer_set(t, RTIMER_TIME(t) + SLEEP_SLOT, 1,
                    (rtimer_callback_t)sender_scheduler, ptr);
         PT_YIELD(&pt);
