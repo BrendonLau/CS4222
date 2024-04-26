@@ -8,39 +8,13 @@
 #include "node-id.h"
 #include "sys/etimer.h"
 #include "sys/rtimer.h"
+#include "typedef.h"
 
 #include <math.h>
 #include <stdio.h>
 #include <string.h>
 
-// From nbr.c
-#define WAKE_TIME RTIMER_SECOND / 10
-#define SLEEP_CYCLE 9
-#define SLEEP_SLOT RTIMER_SECOND / 10
-#define NUM_SEND 2
-
-// For transmitter
-#define SENDER_TYPE 0
-#define RSSI_THRESHOLD -69
-#define LIGHT_DEFAULT -1
-#define LIGHT_READING_LEN 10
-
 linkaddr_t dest_addr;
-
-// From nbr.c
-typedef struct {
-  unsigned long src_id;
-  unsigned long timestamp;
-  unsigned long seq;
-  int device_type; // 0 for sender, 1 for receiver
-} data_packet_struct;
-
-typedef struct {
-  unsigned long src_id;
-  unsigned long timestamp;
-  unsigned long seq;
-  int light_readings[LIGHT_READING_LEN];
-} data_light_packet_struct;
 
 static struct etimer interval_timer;
 
@@ -69,7 +43,7 @@ static void get_light_reading() {
 
   if (value != CC26XX_SENSOR_READING_ERROR) {
     // printf("light sense[%d]: %d\n", light_index, value);
-    light_readings[light_index % LIGHT_READING_LEN] = value;
+    light_readings[light_index] = value;
     light_index++;
   }
   init_opt_reading();
