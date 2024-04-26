@@ -1,6 +1,3 @@
-CONTIKI_PROJECT = nbr
-all: $(CONTIKI_PROJECT)
-
 CONTIKI = ../..
 
 TARGET = cc26x0-cc13x0

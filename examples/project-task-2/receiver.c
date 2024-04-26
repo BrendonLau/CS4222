@@ -8,39 +8,18 @@
 #include "node-id.h"
 #include "sys/etimer.h"
 #include "sys/rtimer.h"
+#include "typedef.h"
 
 #include <math.h>
 #include <stdio.h>
 #include <string.h>
 
-#define WAKE_TIME RTIMER_SECOND / 10
-#define SLEEP_CYCLE 9
-#define SLEEP_SLOT RTIMER_SECOND / 10
-#define NUM_SEND 2
-
-#define RECEIVER_TYPE 1
-#define RSSI_THRESHOLD -69
-
 linkaddr_t dest_addr;
-
-typedef struct {
-  unsigned long src_id;
-  unsigned long timestamp;
-  unsigned long seq;
-  int device_type;
-} data_packet_struct;
-
-typedef struct {
-  unsigned long src_id;
-  unsigned long timestamp;
-  unsigned long seq;
-  int light_readings[10];
-} data_packet_with_light_reading_struct;
 
 static struct rtimer rt;
 static struct pt pt;
 static data_packet_struct data_packet;
-static data_packet_with_light_reading_struct data_packet_with_light_reading;
+static data_light_packet_struct data_packet_with_light_reading;
 unsigned long curr_timestamp;
 static int print_counter;
 
@@ -53,11 +32,11 @@ AUTOSTART_PROCESSES(&nbr_discovery_process);
 void receive_packet_callback(const void *data, uint16_t len,
                              const linkaddr_t *src, const linkaddr_t *dest) {
   if (len == sizeof(data_packet_with_light_reading) && is_link_good) {
-    static data_packet_with_light_reading_struct received_light_data;
+    static data_light_packet_struct received_light_data;
     memcpy(&received_light_data, data, len);
     // printf("Light: ");
-    for (int i = 0; i < 10; i++) {
-      if (received_light_data.light_readings[i] == -1)
+    for (int i = 0; i < LIGHT_READING_LEN; i++) {
+      if (received_light_data.light_readings[i] == LIGHT_DEFAULT)
         break;
       printf("[%d] Light: %d\n", print_counter,
              received_light_data.light_readings[i]);
@@ -151,7 +130,7 @@ char sender_scheduler(struct rtimer *t, void *ptr) {
 
       // get a value that is uniformly distributed between 0 and 2*SLEEP_CYCLE
       // the average is SLEEP_CYCLE
-      NumSleep = 7 - 1;
+      NumSleep = RECEIVER_PRIME - 1;
       // printf(" Sleep for %d slots \n",NumSleep);
 
       // NumSleep should be a constant or static int
