@@ -8,7 +8,7 @@
 #include "node-id.h"
 #include "sys/etimer.h"
 #include "sys/rtimer.h"
-#include "typedef.h"
+#include "task_2_group_8_typedef.h"
 
 #include <math.h>
 #include <stdio.h>
